@@ -1,0 +1,25 @@
+# Enable mod_rewrite
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /roum-token-website/
+  
+  # Redirect direct requests to HTML files
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule ^([^.]+)$ index.html [L,QSA]
+end IfModule>
+
+# Cache control
+<FilesMatch "\.(html|css|js)$">
+  Header set Cache-Control "public, max-age=3600"
+FilesMatch>
+
+# Gzip compression
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html
+  AddOutputFilterByType DEFLATE text/plain
+  AddOutputFilterByType DEFLATE text/css
+  AddOutputFilterByType DEFLATE text/javascript
+  AddOutputFilterByType DEFLATE application/javascript
+  AddOutputFilterByType DEFLATE application/json
+IfModule>
