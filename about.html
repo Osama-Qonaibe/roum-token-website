@@ -84,10 +84,20 @@
             letter-spacing: 2px;
         }
 
+        .header-right {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        nav {
+            display: flex;
+            gap: 1.5rem;
+        }
+
         nav a {
             color: var(--color-text-light);
             text-decoration: none;
-            margin: 0 1.5rem;
             padding: 0.5rem 0;
             border-bottom: 2px solid transparent;
             transition: all 0.3s ease;
@@ -98,6 +108,39 @@
         nav a.active {
             color: var(--color-primary);
             border-bottom-color: var(--color-primary);
+        }
+
+        /* Language Switcher */
+        .lang-switcher {
+            display: flex;
+            gap: 0.5rem;
+            align-items: center;
+            background: rgba(212, 175, 55, 0.1);
+            padding: 0.5rem 0.75rem;
+            border-radius: 6px;
+            border: 1px solid var(--color-primary);
+        }
+
+        .lang-switcher button {
+            background: none;
+            border: none;
+            color: var(--color-text-light);
+            cursor: pointer;
+            padding: 0.4rem 0.8rem;
+            border-radius: 4px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+        }
+
+        .lang-switcher button.active {
+            background: var(--color-primary);
+            color: var(--color-bg-dark);
+        }
+
+        .lang-switcher button:hover:not(.active) {
+            background: rgba(212, 175, 55, 0.2);
+            color: var(--color-primary);
         }
 
         /* PAGE HEADER */
@@ -452,15 +495,19 @@
                 gap: 1rem;
             }
 
+            .header-right {
+                flex-direction: column;
+                width: 100%;
+                gap: 1rem;
+            }
+
             nav {
-                display: flex;
                 flex-wrap: wrap;
                 justify-content: center;
                 gap: 0.5rem;
             }
 
             nav a {
-                margin: 0 0.5rem;
                 font-size: 0.9rem;
             }
 
@@ -495,13 +542,19 @@
                     <p>HERITAGE</p>
                 </div>
             </a>
-            <nav>
-                <a href="https://osama-qonaibe.github.io/roum-token-website/">Home</a>
-                <a href="https://osama-qonaibe.github.io/roum-token-website/about.html" class="active">About</a>
-                <a href="https://osama-qonaibe.github.io/roum-token-website/compliance.html">Compliance</a>
-                <a href="https://osama-qonaibe.github.io/roum-token-website/legal.html">Legal</a>
-                <a href="#contact">Contact</a>
-            </nav>
+            <div class="header-right">
+                <nav>
+                    <a href="https://osama-qonaibe.github.io/roum-token-website/">Home</a>
+                    <a href="https://osama-qonaibe.github.io/roum-token-website/about.html" class="active">About</a>
+                    <a href="https://osama-qonaibe.github.io/roum-token-website/compliance.html">Compliance</a>
+                    <a href="https://osama-qonaibe.github.io/roum-token-website/legal.html">Legal</a>
+                    <a href="#contact">Contact</a>
+                </nav>
+                <div class="lang-switcher">
+                    <button class="active" onclick="switchLanguage('en')">English</button>
+                    <button onclick="switchLanguage('ar')">العربية</button>
+                </div>
+            </div>
         </div>
     </header>
 
@@ -769,5 +822,15 @@
             <p>Developed by Osama Qonaibe | Full-Stack Blockchain Developer</p>
         </div>
     </footer>
+
+    <script>
+        function switchLanguage(lang) {
+            if (lang === 'en') {
+                window.location.href = 'https://osama-qonaibe.github.io/roum-token-website/about.html';
+            } else if (lang === 'ar') {
+                window.location.href = 'https://osama-qonaibe.github.io/roum-token-website/about-ar.html';
+            }
+        }
+    </script>
 </body>
 </html>
