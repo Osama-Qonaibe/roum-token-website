@@ -13,9 +13,10 @@
     <title>رمز ROUM - إرث رميدة | بيناتس الذكي</title>
     
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
 
         :root {
+            /* 🎨 ألوان العلامة التجارية - نظام الألوان الذهبي */
             --color-primary: #D4AF37;
             --color-primary-light: #E6C060;
             --color-primary-dark: #B8860B;
@@ -30,7 +31,9 @@
             --color-border: #D4AF37;
             --color-shadow: rgba(94, 82, 64, 0.15);
             --color-divider: #E6C060;
-            --font-main: 'Cairo', sans-serif;
+            
+            /* 🔤 الخطوط - Tajawal (الخط الحديث للتطبيقات المالية) */
+            --font-main: 'Tajawal', sans-serif;
             --font-mono: 'JetBrains Mono', monospace;
         }
 
@@ -55,7 +58,7 @@
             direction: rtl;
         }
 
-        /* HEADER & NAVIGATION */
+        /* ▓ HEADER & NAVIGATION */
         header {
             background: linear-gradient(135deg, var(--color-bg-dark) 0%, var(--color-bg-chocolate) 100%);
             padding: 1rem 0;
@@ -141,7 +144,7 @@
             border-bottom-color: var(--color-primary);
         }
 
-        /* Language Switcher */
+        /* 🌐 Language Switcher */
         .lang-switcher {
             display: flex;
             gap: 0.5rem;
@@ -175,7 +178,7 @@
             color: var(--color-primary);
         }
 
-        /* HERO SECTION */
+        /* 🎯 HERO SECTION */
         .hero {
             background: linear-gradient(135deg, var(--color-bg-light) 0%, #8B7355 50%, var(--color-bg-dark) 100%);
             color: var(--color-text-light);
@@ -279,7 +282,7 @@
             color: var(--color-bg-dark);
         }
 
-        /* FEATURES SECTION */
+        /* ⭐ FEATURES SECTION */
         .features {
             max-width: 1200px;
             margin: 4rem auto;
@@ -349,7 +352,7 @@
             font-weight: 400;
         }
 
-        /* COMPLIANCE HIGHLIGHT */
+        /* 🏦 COMPLIANCE HIGHLIGHT */
         .compliance-section {
             background: linear-gradient(135deg, var(--color-bg-dark) 0%, var(--color-bg-chocolate) 100%);
             color: var(--color-text-light);
@@ -406,7 +409,7 @@
             font-size: 0.9rem;
         }
 
-        /* STATS SECTION */
+        /* 📊 STATS SECTION */
         .stats {
             max-width: 1200px;
             margin: 4rem auto;
@@ -446,7 +449,7 @@
             font-weight: 600;
         }
 
-        /* FOOTER */
+        /* 🔗 FOOTER */
         footer {
             background: linear-gradient(180deg, var(--color-bg-dark) 0%, #3a3230 100%);
             color: var(--color-text-light);
@@ -528,7 +531,7 @@
             font-size: 0.95rem;
         }
 
-        /* RESPONSIVE */
+        /* 📱 RESPONSIVE DESIGN */
         @media (max-width: 768px) {
             .header-container {
                 flex-wrap: wrap;
@@ -620,8 +623,8 @@
         <div class="header-container">
             <div class="header-right">
                 <div class="lang-switcher">
-                    <button onclick="switchLanguage('ar')">العربية</button>
-                    <button class="active" onclick="switchLanguage('en')">English</button>
+                    <button class="active" onclick="switchLanguage('ar')">العربية</button>
+                    <button onclick="switchLanguage('en')">English</button>
                 </div>
                 <nav>
                     <a href="#contact">التواصل</a>
@@ -673,7 +676,7 @@
 
             <div class="feature-card">
                 <div class="feature-icon">✅</div>
-                <h3>الامتثال</h3>
+                <h3>الامتثال الكامل</h3>
                 <p>100% متوافق مع معايير بيناتس الذكي مع GDPR وAML/KYC وOFAC</p>
             </div>
 
