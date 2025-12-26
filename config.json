@@ -4,7 +4,7 @@
     "subtitle": "Rumeida Heritage",
     "description": "Building tomorrow's financial infrastructure with transparency and compliance",
     "url": "https://roumtoken.com",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "lastUpdated": "2025-12-26"
   },
   "owner": {
@@ -55,11 +55,117 @@
       "changefreq": "monthly"
     },
     {
+      "name": "Legal",
+      "path": "/legal.html",
+      "file": "legal.html",
+      "priority": 0.95,
+      "changefreq": "monthly"
+    },
+    {
       "name": "404 Error",
       "path": "/404.html",
       "file": "404.html",
       "priority": 0.1,
       "changefreq": "yearly"
+    }
+  ],
+  "legalDocuments": [
+    {
+      "name": "Terms of Service",
+      "id": "terms-of-service",
+      "lastUpdated": "2025-12-26",
+      "sections": [
+        "Agreement to Terms",
+        "Use License",
+        "Disclaimer",
+        "Limitations",
+        "Accuracy of Materials",
+        "Links"
+      ]
+    },
+    {
+      "name": "Privacy Policy",
+      "id": "privacy-policy",
+      "lastUpdated": "2025-12-26",
+      "sections": [
+        "Introduction",
+        "Information We Collect",
+        "How We Use Your Information",
+        "Data Protection Measures",
+        "Your Rights",
+        "Third-Party Sharing",
+        "Data Retention"
+      ]
+    },
+    {
+      "name": "Disclaimer",
+      "id": "disclaimer",
+      "lastUpdated": "2025-12-26",
+      "sections": [
+        "No Financial Advice",
+        "Volatility and Risk",
+        "Regulatory Changes",
+        "No Warranty",
+        "Limitation of Liability",
+        "Technical Issues",
+        "Third-Party Links"
+      ]
+    },
+    {
+      "name": "Acceptable Use Policy",
+      "id": "acceptable-use",
+      "lastUpdated": "2025-12-26",
+      "sections": [
+        "Prohibited Activities",
+        "AML/KYC Compliance",
+        "Sanctions Screening",
+        "Account Suspension"
+      ]
+    },
+    {
+      "name": "Intellectual Property",
+      "id": "intellectual-property",
+      "lastUpdated": "2025-12-26",
+      "sections": [
+        "Ownership",
+        "License Grant",
+        "Restrictions",
+        "Trademarks",
+        "User-Generated Content"
+      ]
+    },
+    {
+      "name": "Limitation of Liability",
+      "id": "liability",
+      "lastUpdated": "2025-12-26",
+      "sections": [
+        "Excluded Damages",
+        "No Guarantee",
+        "User Responsibility"
+      ]
+    },
+    {
+      "name": "Cookies Policy",
+      "id": "cookies-policy",
+      "lastUpdated": "2025-12-26",
+      "sections": [
+        "What Are Cookies",
+        "Types of Cookies We Use",
+        "Third-Party Cookies",
+        "Managing Cookies",
+        "Local Storage"
+      ]
+    },
+    {
+      "name": "Contact Legal Team",
+      "id": "contact-legal",
+      "lastUpdated": "2025-12-26",
+      "contacts": {
+        "legal": "legal@roumtoken.com",
+        "compliance": "compliance@roumtoken.com",
+        "privacy": "privacy@roumtoken.com",
+        "general": "info@roumtoken.com"
+      }
     }
   ],
   "blockchain": {
@@ -102,7 +208,8 @@
     "darkMode": false,
     "animations": true,
     "accessibility": true,
-    "security": true
+    "security": true,
+    "legalDocumentation": true
   },
   "deployment": {
     "platform": "GitHub Pages / Custom Server",
