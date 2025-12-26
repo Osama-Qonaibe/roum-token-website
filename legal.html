@@ -63,14 +63,51 @@
             text-decoration: none;
         }
 
+        header nav {
+            display: flex;
+            gap: 1.5rem;
+        }
+
         header nav a {
             color: var(--color-text-light);
             text-decoration: none;
-            margin-left: 30px;
             transition: color 0.3s;
         }
 
         header nav a:hover {
+            color: var(--color-primary);
+        }
+
+        /* Language Switcher */
+        .lang-switcher {
+            display: flex;
+            gap: 0.5rem;
+            align-items: center;
+            background: rgba(212, 175, 55, 0.1);
+            padding: 0.5rem 0.75rem;
+            border-radius: 6px;
+            border: 1px solid var(--color-primary);
+        }
+
+        .lang-switcher button {
+            background: none;
+            border: none;
+            color: var(--color-text-light);
+            cursor: pointer;
+            padding: 0.4rem 0.8rem;
+            border-radius: 4px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+        }
+
+        .lang-switcher button.active {
+            background: var(--color-primary);
+            color: var(--color-bg-dark);
+        }
+
+        .lang-switcher button:hover:not(.active) {
+            background: rgba(212, 175, 55, 0.2);
             color: var(--color-primary);
         }
 
@@ -267,8 +304,14 @@
                 gap: 15px;
             }
 
+            header nav {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 0.5rem;
+            }
+
             header nav a {
-                margin-left: 15px;
+                font-size: 0.9rem;
             }
 
             .toc ul {
@@ -282,12 +325,18 @@
     <header>
         <div class="container">
             <a href="https://osama-qonaibe.github.io/roum-token-website/" class="logo">💸 ROUM Token</a>
-            <nav>
-                <a href="https://osama-qonaibe.github.io/roum-token-website/">Home</a>
-                <a href="https://osama-qonaibe.github.io/roum-token-website/about.html">About</a>
-                <a href="https://osama-qonaibe.github.io/roum-token-website/compliance.html">Compliance</a>
-                <a href="https://osama-qonaibe.github.io/roum-token-website/legal.html">Legal</a>
-            </nav>
+            <div style="display: flex; gap: 2rem; align-items: center;">
+                <nav>
+                    <a href="https://osama-qonaibe.github.io/roum-token-website/">Home</a>
+                    <a href="https://osama-qonaibe.github.io/roum-token-website/about.html">About</a>
+                    <a href="https://osama-qonaibe.github.io/roum-token-website/compliance.html">Compliance</a>
+                    <a href="https://osama-qonaibe.github.io/roum-token-website/legal.html">Legal</a>
+                </nav>
+                <div class="lang-switcher">
+                    <button class="active" onclick="switchLanguage('en')">English</button>
+                    <button onclick="switchLanguage('ar')">العربية</button>
+                </div>
+            </div>
         </div>
     </header>
 
@@ -629,5 +678,15 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        function switchLanguage(lang) {
+            if (lang === 'en') {
+                window.location.href = 'https://osama-qonaibe.github.io/roum-token-website/legal.html';
+            } else if (lang === 'ar') {
+                window.location.href = 'https://osama-qonaibe.github.io/roum-token-website/legal-ar.html';
+            }
+        }
+    </script>
 </body>
 </html>
