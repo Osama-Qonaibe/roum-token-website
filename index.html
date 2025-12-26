@@ -13,6 +13,9 @@
     <title>ROUM Token - Rumeida Heritage | Binance Smart Chain</title>
     
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+
+        /* 🎨 Brand Color System - ROUM Token Professional Identity */
         :root {
             --color-primary: #D4AF37;
             --color-primary-light: #E6C060;
@@ -28,6 +31,10 @@
             --color-border: #D4AF37;
             --color-shadow: rgba(94, 82, 64, 0.15);
             --color-divider: #E6C060;
+            
+            /* 🔤 Typography - Modern Fintech Fonts */
+            --font-main: 'Tajawal', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
         }
 
         * {
@@ -36,14 +43,20 @@
             box-sizing: border-box;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-            line-height: 1.6;
+            font-family: var(--font-main);
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 1.8;
             color: var(--color-text-primary);
             background-color: var(--color-bg-cream);
         }
 
-        /* HEADER & NAVIGATION */
+        /* 🔝 HEADER & NAVIGATION */
         header {
             background: linear-gradient(135deg, var(--color-bg-dark) 0%, var(--color-bg-chocolate) 100%);
             padding: 1rem 0;
@@ -78,7 +91,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            font-weight: bold;
+            font-weight: 700;
             font-size: 1.5rem;
             color: var(--color-bg-dark);
             box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
@@ -89,6 +102,7 @@
             margin: 0;
             color: var(--color-primary);
             letter-spacing: 2px;
+            font-weight: 700;
         }
 
         .logo-text p {
@@ -96,6 +110,7 @@
             margin: 0;
             color: var(--color-text-light);
             letter-spacing: 1px;
+            font-weight: 600;
         }
 
         .header-right {
@@ -116,6 +131,7 @@
             border-bottom: 2px solid transparent;
             transition: all 0.3s ease;
             font-weight: 500;
+            font-size: 0.95rem;
         }
 
         nav a:hover {
@@ -123,7 +139,7 @@
             border-bottom-color: var(--color-primary);
         }
 
-        /* Language Switcher */
+        /* 🌐 Language Switcher */
         .lang-switcher {
             display: flex;
             gap: 0.5rem;
@@ -144,6 +160,7 @@
             font-weight: 600;
             transition: all 0.3s ease;
             font-size: 0.9rem;
+            font-family: var(--font-main);
         }
 
         .lang-switcher button.active {
@@ -156,7 +173,7 @@
             color: var(--color-primary);
         }
 
-        /* HERO SECTION */
+        /* 🎯 HERO SECTION */
         .hero {
             background: linear-gradient(135deg, var(--color-bg-light) 0%, #8B7355 50%, var(--color-bg-dark) 100%);
             color: var(--color-text-light);
@@ -172,7 +189,7 @@
         .hero h2 {
             font-size: 3.5rem;
             margin-bottom: 1rem;
-            font-weight: 700;
+            font-weight: 800;
             text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
             letter-spacing: 2px;
         }
@@ -184,6 +201,7 @@
             max-width: 700px;
             margin-left: auto;
             margin-right: auto;
+            font-weight: 400;
         }
 
         .hero-badges {
@@ -205,6 +223,7 @@
             align-items: center;
             gap: 0.5rem;
             backdrop-filter: blur(10px);
+            font-size: 0.95rem;
         }
 
         .badge::before {
@@ -230,6 +249,7 @@
             text-decoration: none;
             display: inline-block;
             letter-spacing: 0.5px;
+            font-family: var(--font-main);
         }
 
         .btn-primary {
@@ -255,7 +275,7 @@
             color: var(--color-bg-dark);
         }
 
-        /* FEATURES SECTION */
+        /* ⭐ FEATURES SECTION */
         .features {
             max-width: 1200px;
             margin: 4rem auto;
@@ -269,6 +289,7 @@
             color: var(--color-text-primary);
             position: relative;
             padding-bottom: 1rem;
+            font-weight: 700;
         }
 
         .section-title::after {
@@ -314,15 +335,17 @@
             color: var(--color-primary);
             margin-bottom: 1rem;
             font-size: 1.25rem;
+            font-weight: 700;
         }
 
         .feature-card p {
             color: var(--color-text-primary);
             font-size: 0.95rem;
-            line-height: 1.6;
+            line-height: 1.7;
+            font-weight: 400;
         }
 
-        /* COMPLIANCE HIGHLIGHT */
+        /* 🏦 COMPLIANCE HIGHLIGHT */
         .compliance-section {
             background: linear-gradient(135deg, var(--color-bg-dark) 0%, var(--color-bg-chocolate) 100%);
             color: var(--color-text-light);
@@ -342,12 +365,14 @@
             font-size: 2rem;
             margin-bottom: 1.5rem;
             text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+            font-weight: 700;
         }
 
         .compliance-section p {
             font-size: 1.1rem;
             margin-bottom: 2rem;
             line-height: 1.8;
+            font-weight: 400;
         }
 
         .compliance-list {
@@ -368,9 +393,16 @@
             color: var(--color-primary);
             display: block;
             margin-bottom: 0.5rem;
+            font-weight: 700;
+            font-size: 1rem;
         }
 
-        /* STATS SECTION */
+        .compliance-item span {
+            font-weight: 400;
+            font-size: 0.9rem;
+        }
+
+        /* 📊 STATS SECTION */
         .stats {
             max-width: 1200px;
             margin: 4rem auto;
@@ -400,7 +432,7 @@
         .stat-number {
             font-size: 2.5rem;
             color: var(--color-primary);
-            font-weight: 700;
+            font-weight: 800;
             margin-bottom: 0.5rem;
         }
 
@@ -410,7 +442,7 @@
             font-weight: 600;
         }
 
-        /* FOOTER */
+        /* 📝 FOOTER */
         footer {
             background: linear-gradient(180deg, var(--color-bg-dark) 0%, #3a3230 100%);
             color: var(--color-text-light);
@@ -431,6 +463,7 @@
             color: var(--color-primary);
             margin-bottom: 1rem;
             font-size: 1.1rem;
+            font-weight: 700;
         }
 
         .footer-section a {
@@ -439,10 +472,18 @@
             display: block;
             margin-bottom: 0.5rem;
             transition: color 0.3s ease;
+            font-weight: 400;
+            font-size: 0.95rem;
         }
 
         .footer-section a:hover {
             color: var(--color-primary);
+        }
+
+        .footer-section p {
+            font-weight: 400;
+            font-size: 0.95rem;
+            line-height: 1.6;
         }
 
         .social-links {
@@ -477,9 +518,11 @@
         .footer-bottom p {
             margin: 0.5rem 0;
             opacity: 0.9;
+            font-weight: 400;
+            font-size: 0.95rem;
         }
 
-        /* RESPONSIVE */
+        /* 📱 RESPONSIVE DESIGN */
         @media (max-width: 768px) {
             .header-container {
                 flex-direction: column;
@@ -527,6 +570,10 @@
             .compliance-list {
                 grid-template-columns: 1fr;
             }
+
+            .section-title {
+                font-size: 2rem;
+            }
         }
 
         @media (max-width: 480px) {
@@ -552,6 +599,10 @@
                 width: 100%;
                 max-width: 200px;
                 margin: 0 auto;
+            }
+
+            .logo-text h1 {
+                font-size: 1.25rem;
             }
         }
     </style>
@@ -753,8 +804,7 @@
             if (lang === 'en') {
                 window.location.href = 'https://osama-qonaibe.github.io/roum-token-website/';
             } else if (lang === 'ar') {
-                // Arabic version of homepage (create index-ar.html for full Arabic experience)
-                window.location.href = 'https://osama-qonaibe.github.io/roum-token-website/compliance-ar.html';
+                window.location.href = 'https://osama-qonaibe.github.io/roum-token-website/index-ar.html';
             }
         }
     </script>
