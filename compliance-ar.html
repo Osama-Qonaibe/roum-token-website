@@ -3,11 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="معايير الامتثال لـ ROUM Token - 100% متوافق مع Binance Smart Chain مع معايير GDPR و AML/KYC و OFAC">
-    <meta name="keywords" content="الامتثال، GDPR، AML/KYC، OFAC، FinCEN، Binance Smart Chain">
-    <title>معايير الامتثال | ROUM Token</title>
+    <meta name="description" content="معايير الامتثال القانوني لرمز ROUM - مع الرعاية للمعايير الدولية في GDPR, AML/KYC, OFAC وغيرها.">
+    <meta name="keywords" content="الامتثال، GDPR، AML/KYC، OFAC، معايير بيناتس، الترخيص">
+    <meta name="author" content="أسامة قونيبة">
+    <title>معايير الامتثال - رمز ROUM</title>
     
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+
         :root {
             --color-primary: #D4AF37;
             --color-primary-light: #E6C060;
@@ -19,8 +22,12 @@
             --color-text-primary: #5E5240;
             --color-text-light: #FFF8F0;
             --color-text-white: #FFFFFF;
+            --color-accent-teal: #32B8C6;
             --color-border: #D4AF37;
             --color-shadow: rgba(94, 82, 64, 0.15);
+            --color-divider: #E6C060;
+            --font-main: 'Cairo', sans-serif;
+            --font-mono: 'JetBrains Mono', monospace;
         }
 
         * {
@@ -29,14 +36,22 @@
             box-sizing: border-box;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Droid Arabic Kufi', sans-serif;
+            font-family: var(--font-main);
+            font-size: 16px;
+            font-weight: 400;
             line-height: 1.8;
             color: var(--color-text-primary);
             background-color: var(--color-bg-cream);
+            text-align: right;
+            direction: rtl;
         }
 
-        /* HEADER */
+        /* HEADER & NAVIGATION */
         header {
             background: linear-gradient(135deg, var(--color-bg-dark) 0%, var(--color-bg-chocolate) 100%);
             padding: 1rem 0;
@@ -53,6 +68,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            flex-direction: row-reverse;
         }
 
         .logo {
@@ -71,9 +87,10 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            font-weight: bold;
+            font-weight: 700;
             font-size: 1.5rem;
             color: var(--color-bg-dark);
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
         }
 
         .logo-text h1 {
@@ -81,17 +98,28 @@
             margin: 0;
             color: var(--color-primary);
             letter-spacing: 2px;
+            font-weight: 700;
+        }
+
+        .logo-text p {
+            font-size: 0.75rem;
+            margin: 0;
+            color: var(--color-text-light);
+            letter-spacing: 1px;
+            font-weight: 500;
         }
 
         .header-right {
             display: flex;
             align-items: center;
             gap: 2rem;
+            flex-direction: row;
         }
 
         nav {
             display: flex;
             gap: 1.5rem;
+            flex-direction: row;
         }
 
         nav a {
@@ -101,10 +129,10 @@
             border-bottom: 2px solid transparent;
             transition: all 0.3s ease;
             font-weight: 500;
+            font-size: 0.95rem;
         }
 
-        nav a:hover,
-        nav a.active {
+        nav a:hover {
             color: var(--color-primary);
             border-bottom-color: var(--color-primary);
         }
@@ -130,6 +158,7 @@
             font-weight: 600;
             transition: all 0.3s ease;
             font-size: 0.9rem;
+            font-family: var(--font-main);
         }
 
         .lang-switcher button.active {
@@ -151,9 +180,10 @@
         }
 
         .page-header h1 {
-            font-size: 3rem;
+            font-size: 2.5rem;
             margin-bottom: 1rem;
-            font-weight: 700;
+            font-weight: 800;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
             letter-spacing: 1px;
         }
 
@@ -162,35 +192,14 @@
             opacity: 0.95;
             max-width: 700px;
             margin: 0 auto;
+            font-weight: 400;
         }
 
-        /* CONTENT */
-        .content {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 4rem 2rem;
-        }
-
-        .compliance-notice {
-            background: linear-gradient(135deg, var(--color-bg-dark) 0%, var(--color-bg-chocolate) 100%);
-            color: var(--color-text-light);
-            padding: 2.5rem;
-            border-radius: 12px;
-            margin-bottom: 3rem;
-            border-right: 5px solid var(--color-primary);
-            box-shadow: 0 10px 30px var(--color-shadow);
-        }
-
-        .compliance-notice h2 {
-            color: var(--color-primary);
-            font-size: 1.75rem;
-            margin-bottom: 1rem;
-        }
-
-        .compliance-notice p {
-            font-size: 1.05rem;
-            line-height: 1.8;
-            margin-bottom: 1rem;
+        /* MAIN CONTENT */
+        .main-content {
+            max-width: 1000px;
+            margin: 4rem auto;
+            padding: 0 2rem;
         }
 
         .section {
@@ -198,127 +207,175 @@
         }
 
         .section h2 {
-            color: var(--color-primary);
             font-size: 2rem;
+            color: var(--color-primary);
             margin-bottom: 1.5rem;
             position: relative;
             padding-bottom: 1rem;
-            border-bottom: 2px solid var(--color-border);
+            font-weight: 700;
+        }
+
+        .section h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--color-primary), transparent);
         }
 
         .section h3 {
-            color: var(--color-bg-dark);
             font-size: 1.3rem;
-            margin-top: 2rem;
-            margin-bottom: 1rem;
+            color: var(--color-bg-dark);
+            margin: 1.5rem 0 0.75rem 0;
+            font-weight: 600;
         }
 
         .section p {
-            color: var(--color-text-primary);
             font-size: 1rem;
             line-height: 1.8;
-            margin-bottom: 1rem;
-        }
-
-        .compliance-list {
-            list-style: none;
-            margin: 1.5rem 0;
-        }
-
-        .compliance-list li {
-            padding: 1rem 0 1rem 2rem;
-            position: relative;
             color: var(--color-text-primary);
+            margin-bottom: 1rem;
+            font-weight: 400;
         }
 
-        .compliance-list li::before {
-            content: '✓';
-            position: absolute;
-            right: 0;
-            color: var(--color-primary);
-            font-weight: bold;
-            font-size: 1.2rem;
-        }
-
-        .framework-card {
-            background: var(--color-bg-cream);
-            border-right: 4px solid var(--color-primary);
-            padding: 1.5rem;
-            margin: 1.5rem 0;
-            border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-            transition: all 0.3s ease;
-        }
-
-        .framework-card:hover {
-            transform: translateX(-5px);
-            box-shadow: 0 6px 20px var(--color-shadow);
-        }
-
-        .framework-card strong {
-            color: var(--color-primary);
-            font-size: 1.1rem;
-            display: block;
-            margin-bottom: 0.5rem;
-        }
-
-        .framework-card p {
-            margin: 0;
-            font-size: 0.95rem;
-        }
-
-        .highlight-box {
-            background: linear-gradient(135deg, rgba(212, 175, 55, 0.1) 0%, rgba(212, 175, 55, 0.05) 100%);
-            border: 2px solid var(--color-primary);
-            padding: 2rem;
-            border-radius: 12px;
-            margin: 2rem 0;
-        }
-
-        .highlight-box h3 {
-            color: var(--color-primary);
-            margin-top: 0;
-        }
-
-        .stats-flex {
+        /* COMPLIANCE CARDS */
+        .compliance-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 2rem;
             margin: 2rem 0;
         }
 
-        .stat-item {
+        .compliance-card {
             background: var(--color-bg-cream);
+            border: 2px solid var(--color-border);
+            border-radius: 12px;
             padding: 2rem;
             text-align: center;
-            border-radius: 12px;
-            border: 2px solid var(--color-border);
             transition: all 0.3s ease;
+            box-shadow: 0 10px 30px var(--color-shadow);
         }
 
-        .stat-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px var(--color-shadow);
+        .compliance-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.3), 0 15px 40px var(--color-shadow);
+            border-color: var(--color-primary-light);
         }
 
-        .stat-number {
-            font-size: 2.5rem;
+        .compliance-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .compliance-card h3 {
+            color: var(--color-primary);
+            margin-bottom: 1rem;
+            font-size: 1.25rem;
+            font-weight: 700;
+        }
+
+        .compliance-card p {
+            color: var(--color-text-primary);
+            font-size: 0.95rem;
+            line-height: 1.7;
+            margin-bottom: 0;
+            font-weight: 400;
+        }
+
+        /* STANDARDS LIST */
+        .standards-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .standards-list li {
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.05), rgba(201, 169, 97, 0.05));
+            border-right: 4px solid var(--color-primary);
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            border-radius: 8px;
+            font-size: 1rem;
+            line-height: 1.7;
+            font-weight: 400;
+            color: var(--color-text-primary);
+        }
+
+        .standards-list strong {
             color: var(--color-primary);
             font-weight: 700;
+            display: block;
             margin-bottom: 0.5rem;
         }
 
-        .stat-text {
+        /* CHECKLIST */
+        .checklist {
+            background: var(--color-bg-cream);
+            border: 2px solid var(--color-divider);
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+
+        .checklist ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .checklist li {
+            padding: 0.75rem 0;
+            padding-right: 2rem;
+            position: relative;
+            font-size: 1rem;
+            line-height: 1.6;
             color: var(--color-text-primary);
-            font-weight: 600;
+            font-weight: 400;
+        }
+
+        .checklist li::before {
+            content: '✓';
+            position: absolute;
+            right: 0;
+            color: var(--color-primary);
+            font-weight: 800;
+            font-size: 1.2rem;
+        }
+
+        /* HIGHLIGHT BOX */
+        .highlight-box {
+            background: linear-gradient(135deg, var(--color-bg-dark) 0%, var(--color-bg-chocolate) 100%);
+            color: var(--color-text-light);
+            border-left: 4px solid var(--color-primary);
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 8px;
+        }
+
+        .highlight-box h4 {
+            color: var(--color-primary);
+            margin-bottom: 1rem;
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+
+        .highlight-box p {
+            color: var(--color-text-light);
+            margin: 0;
+            font-weight: 400;
+        }
+
+        /* TABLE STYLES */
+        .table-wrapper {
+            overflow-x: auto;
+            margin: 2rem 0;
         }
 
         table {
             width: 100%;
             border-collapse: collapse;
-            margin: 2rem 0;
             background: var(--color-bg-cream);
-            box-shadow: 0 4px 15px var(--color-shadow);
+            border: 1px solid var(--color-border);
             border-radius: 8px;
             overflow: hidden;
         }
@@ -329,19 +386,19 @@
         }
 
         th, td {
-            padding: 1.2rem;
+            padding: 1rem;
             text-align: right;
-            border-bottom: 1px solid var(--color-border);
+            border-bottom: 1px solid var(--color-divider);
+            font-weight: 400;
         }
 
         th {
-            font-weight: 600;
+            font-weight: 700;
             color: var(--color-primary);
-            border-bottom: 2px solid var(--color-primary);
         }
 
         tbody tr:hover {
-            background: rgba(212, 175, 55, 0.05);
+            background: linear-gradient(90deg, rgba(212, 175, 55, 0.05), transparent);
         }
 
         /* FOOTER */
@@ -364,6 +421,8 @@
         .footer-section h4 {
             color: var(--color-primary);
             margin-bottom: 1rem;
+            font-size: 1.1rem;
+            font-weight: 700;
         }
 
         .footer-section a {
@@ -372,10 +431,42 @@
             display: block;
             margin-bottom: 0.5rem;
             transition: color 0.3s ease;
+            font-weight: 400;
+            font-size: 0.95rem;
         }
 
         .footer-section a:hover {
             color: var(--color-primary);
+        }
+
+        .footer-section p {
+            font-weight: 400;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+            flex-direction: row-reverse;
+        }
+
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(212, 175, 55, 0.1);
+            border-radius: 50%;
+            transition: all 0.3s ease;
+            margin: 0;
+        }
+
+        .social-links a:hover {
+            background: var(--color-primary);
+            color: var(--color-bg-dark);
         }
 
         .footer-bottom {
@@ -385,15 +476,22 @@
             color: var(--color-text-light);
         }
 
+        .footer-bottom p {
+            margin: 0.5rem 0;
+            opacity: 0.9;
+            font-weight: 400;
+            font-size: 0.95rem;
+        }
+
         /* RESPONSIVE */
         @media (max-width: 768px) {
             .header-container {
-                flex-direction: column;
+                flex-wrap: wrap;
                 gap: 1rem;
             }
 
             .header-right {
-                flex-direction: column;
+                flex-direction: column-reverse;
                 width: 100%;
                 gap: 1rem;
             }
@@ -405,15 +503,42 @@
             }
 
             nav a {
-                font-size: 0.9rem;
+                font-size: 0.8rem;
+                margin: 0 0.25rem;
             }
 
             .page-header h1 {
                 font-size: 2rem;
             }
 
+            .compliance-grid {
+                grid-template-columns: 1fr;
+            }
+
+            table {
+                font-size: 0.9rem;
+            }
+
+            th, td {
+                padding: 0.75rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .page-header {
+                padding: 2rem 1rem;
+            }
+
+            .page-header h1 {
+                font-size: 1.75rem;
+            }
+
             .section h2 {
                 font-size: 1.5rem;
+            }
+
+            .main-content {
+                padding: 0 1rem;
             }
         }
     </style>
@@ -422,267 +547,219 @@
     <!-- HEADER -->
     <header>
         <div class="header-container">
-            <a href="https://osama-qonaibe.github.io/roum-token-website/" class="logo">
+            <div class="header-right">
+                <div class="lang-switcher">
+                    <button onclick="switchLanguage('ar')">العربية</button>
+                    <button class="active" onclick="switchLanguage('en')">English</button>
+                </div>
+                <nav>
+                    <a href="#contact">التواصل</a>
+                    <a href="https://osama-qonaibe.github.io/roum-token-website/legal-ar.html">القانونية</a>
+                    <a href="https://osama-qonaibe.github.io/roum-token-website/compliance-ar.html">الامتثال</a>
+                    <a href="https://osama-qonaibe.github.io/roum-token-website/about-ar.html">عننا</a>
+                    <a href="https://osama-qonaibe.github.io/roum-token-website/index-ar.html">الرئيسية</a>
+                </nav>
+            </div>
+            <a href="https://osama-qonaibe.github.io/roum-token-website/index-ar.html" class="logo">
                 <div class="logo-image">R</div>
                 <div class="logo-text">
                     <h1>ROUM</h1>
-                    <p>التراث</p>
+                    <p>إرث</p>
                 </div>
             </a>
-            <div class="header-right">
-                <nav>
-                    <a href="https://osama-qonaibe.github.io/roum-token-website/">الرئيسية</a>
-                    <a href="https://osama-qonaibe.github.io/roum-token-website/about.html">عن</a>
-                    <a href="https://osama-qonaibe.github.io/roum-token-website/compliance-ar.html" class="active">الامتثال</a>
-                    <a href="https://osama-qonaibe.github.io/roum-token-website/legal.html">القانوني</a>
-                    <a href="#contact">اتصل</a>
-                </nav>
-                <div class="lang-switcher">
-                    <button onclick="switchLanguage('en')">English</button>
-                    <button class="active" onclick="switchLanguage('ar')">العربية</button>
-                </div>
-            </div>
         </div>
     </header>
 
     <!-- PAGE HEADER -->
     <section class="page-header">
         <h1>معايير الامتثال</h1>
-        <p>إطار عمل تنظيمي احترافي مع توافق 100% مع Binance Smart Chain بدون استثناءات</p>
+        <p>الالتزام الكامل بمعايير بيناتس الذكي والقوانين الدولية</p>
     </section>
 
-    <!-- CONTENT -->
-    <div class="content">
-        <!-- BINANCE COMMITMENT -->
-        <div class="compliance-notice">
-            <h2>🔐 التزام BINANCE SMART CHAIN</h2>
-            <p><strong>توافق 100% بدون استثناءات</strong></p>
-            <p>يلتزم ROUM Token بالحفاظ على التوافق الكامل مع جميع معايير Binance Smart Chain ومتطلبات الأمان والأطر التنظيمية. هذا الالتزام غير قابل للتفاوض وينطبق على جميع الاختصاصات والمجالات التشغيلية.</p>
-        </div>
-
-        <!-- EXECUTIVE SUMMARY -->
-        <div class="section">
-            <h2>ملخص تنفيذي</h2>
-            <p>يعمل ROUM Token وفقاً لإطار عمل امتثال شامل مصمم لضمان أقصى مستويات الشفافية والأمان والالتزام التنظيمي. يجمع نهجنا متعدد الطبقات بين أفضل الممارسات الصناعية والانخراط التنظيمي الاستباقي.</p>
-            
-            <div class="stats-flex">
-                <div class="stat-item">
-                    <div class="stat-number">7</div>
-                    <div class="stat-text">أطر الامتثال</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">100%</div>
-                    <div class="stat-text">متوافق مع Binance</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">✅</div>
-                    <div class="stat-text">تدقيق احترافي</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">24/7</div>
-                    <div class="stat-text">مراقبة</div>
-                </div>
-            </div>
-        </div>
-
-        <!-- REGULATORY FRAMEWORKS -->
-        <div class="section">
-            <h2>الأطر التنظيمية</h2>
-
-            <div class="framework-card">
-                <strong>1. GDPR (اللائحة العامة لحماية البيانات) - الاتحاد الأوروبي</strong>
-                <p>التوافق الكامل مع حماية البيانات مع حقوق المستخدم الكاملة بما في ذلك الوصول والتعديل والحذف. إدارة موافقة المستخدم وسياسات الاحتفاظ بالبيانات ومبادئ الخصوصية حسب التصميم المنفذة في جميع أنحاء المنصة.</p>
-            </div>
-
-            <div class="framework-card">
-                <strong>2. AML/KYC (مكافحة غسل الأموال / التحقق من هوية العميل)</strong>
-                <p>تحقق شامل من العملاء ومراقبة المعاملات والإبلاغ عن الأنشطة المريبة. التحقق متعدد المستويات من KYC مع العناية الواجبة المحسنة للمستخدمين والكيانات عالية المخاطر.</p>
-            </div>
-
-            <div class="framework-card">
-                <strong>3. OFAC (مكتب مراقبة الأصول الأجنبية) - الولايات المتحدة</strong>
-                <p>فحص العقوبات ضد قائمة OFAC SDN والقائمة الموحدة غير SDN وقوائم الأطراف المقيدة الأخرى. المراقبة الفورية للمعاملات والحجب التلقائي للولايات القضائية والكيانات المقيدة.</p>
-            </div>
-
-            <div class="framework-card">
-                <strong>4. FinCEN (شبكة إنفاذ الجرائم المالية)</strong>
-                <p>التوافق مع لوائح وزارة الخزانة الأمريكية وتقارير المعاملات النقدية والتقارير المريبة. بروتوكولات الإيداع والمراقبة المنتظمة لمنع الجرائم المالية.</p>
-            </div>
-
-            <div class="framework-card">
-                <strong>5. SOX (قانون Sarbanes-Oxley) - الحوكمة المؤسسية</strong>
-                <p>دقة التقارير المالية وتقييم الضوابط الداخلية والمسؤولية الإدارية. التدقيقات المستقلة ومتطلبات الإفصاح المالي الشفاف.</p>
-            </div>
-
-            <div class="framework-card">
-                <strong>6. اللوائح المحلية والإقليمية</strong>
-                <p>الامتثال الخاص باختصاص معين في جميع الأسواق التشغيلية. المراقبة المنتظمة للتغييرات التنظيمية والتنفيذ الاستباقي للمتطلبات الجديدة.</p>
-            </div>
-
-            <div class="framework-card">
-                <strong>7. المعايير الدولية وأفضل الممارسات</strong>
-                <p>توصيات FATF والامتثال لـ Basel III ومعايير العملات الرقمية التنظيمية الناشئة. بروتوكولات الأمان الرائدة في الصناعة وتدابير الشفافية.</p>
-            </div>
-        </div>
-
-        <!-- DATA PROTECTION -->
-        <div class="section">
-            <h2>حماية البيانات وخصوصية المستخدم</h2>
-            
-            <h3>حقوق المستخدم</h3>
-            <ul class="compliance-list">
-                <li>الحق في الوصول إلى البيانات الشخصية</li>
-                <li>حق نقل البيانات</li>
-                <li>الحق في الحذف (الحق في أن يُنسى)</li>
-                <li>الحق في تصحيح البيانات غير الدقيقة</li>
-                <li>الحق في تقييد المعالجة</li>
-                <li>الحق في الاعتراض على المعالجة</li>
-                <li>الحق في تقديم شكاوى للسلطات</li>
-            </ul>
-
-            <h3>تدابير أمان البيانات</h3>
-            <ul class="compliance-list">
-                <li>التشفير من طرف إلى طرف لجميع البيانات الحساسة</li>
-                <li>فرض المصادقة متعددة العوامل (MFA)</li>
-                <li>التدقيقات الأمنية المنتظمة واختبارات الاختراق</li>
-                <li>نسخ احتياطية آمنة للبيانات واستعادة الكوارث</li>
-                <li>التحكم في الوصول والأذونات القائمة على الأدوار</li>
-                <li>تدريب الموظفين على الأمان بشكل منتظم</li>
-                <li>سياسات الاحتفاظ بالبيانات مع الحذف التلقائي</li>
-            </ul>
-        </div>
-
-        <!-- TRANSACTION MONITORING -->
-        <div class="section">
-            <h2>مراقبة المعاملات والإنفاذ</h2>
+    <!-- MAIN CONTENT -->
+    <div class="main-content">
+        <!-- OVERVIEW -->
+        <section class="section">
+            <h2>🌟 نظرة عامة</h2>
+            <p>رمز ROUM ملتزم برأس مالية بأعلى مستويات الامتثال القانوني للعملات المشفرة والبيناتس اللامركزية في جميع الولايات القضائية التي نعمل بها.</p>
             
             <div class="highlight-box">
-                <h3>نظام المراقبة الفورية</h3>
-                <p>مراقبة المعاملات المؤتمتة 24/7 مع الكشف عن الشذوذ بقوة الذكاء الاصطناعي. تؤدي الأنماط المريبة إلى تحقيق فوري وتصعيد مناسب.</p>
+                <h4>⚡ الابتكار والامتثال</h4>
+                <p>نحن لا نرى الامتثال القانوني كعائق أمام الابتكار - بل كأساس لمنافسة حقيقية ومبادلة مخاطر. الابتكار والامتثال يسيران بجنب بعد بنال ROUM.</p>
             </div>
+        </section>
 
-            <h3>إجراءات الانتهاك</h3>
-            <ul class="compliance-list">
-                <li>وضع علامات تلقائية على المعاملات المريبة</li>
-                <li>إخطار فوري لفريق الامتثال</li>
-                <li>التحقيق في غضون 24-48 ساعة</li>
-                <li>التقارير التنظيمية حيث يلزم الأمر</li>
-                <li>قيود الحساب أو الإغلاق إذا لزم الأمر</li>
-                <li>التوثيق الكامل ومسار التدقيق</li>
-                <li>إخطار المستخدم ضمن الأطر الزمنية القانونية</li>
+        <!-- COMPLIANCE STANDARDS -->
+        <section class="section">
+            <h2>📚 معايير رئيسية</h2>
+            
+            <div class="compliance-grid">
+                <div class="compliance-card">
+                    <div class="compliance-icon">🌐</div>
+                    <h3>GDPR</h3>
+                    <p>الالتزام بهويات البيانات العامة بالمرونة مع الحماية الكاملة للخصوصية</p>
+                </div>
+
+                <div class="compliance-card">
+                    <div class="compliance-icon">💳</div>
+                    <h3>AML/KYC</h3>
+                    <p>مكافحة غسيل الأموال والتحقق من هوية العملاء بمعايير مشددة</p>
+                </div>
+
+                <div class="compliance-card">
+                    <div class="compliance-icon">🔒</div>
+                    <h3>OFAC</h3>
+                    <p>التزام بعقوبات الخزانة الأمريكية حيال العبور على القوائم السوداء</p>
+                </div>
+
+                <div class="compliance-card">
+                    <div class="compliance-icon">💲</div>
+                    <h3>FinCEN</h3>
+                    <p>تقارير بمالية اللوائام مع بلاغات دقيقة للعمليات المريبة</p>
+                </div>
+
+                <div class="compliance-card">
+                    <div class="compliance-icon">📜</div>
+                    <h3>معايير محلية</h3>
+                    <p>التزام كامل بقوانين بياناتس المحلية في كل ولاية قضائية</p>
+                </div>
+
+                <div class="compliance-card">
+                    <div class="compliance-icon">✅</div>
+                    <h3>عمليات تدقيق</h3>
+                    <p>عمليات تدقيق احترافية ثلاثية مرات سنوياً</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- DETAILED COMPLIANCE STANDARDS -->
+        <section class="section">
+            <h2>📋 معايير مفصلة</h2>
+            
+            <ul class="standards-list">
+                <li>
+                    <strong>🌐 GDPR - لوائح حماية البيانات العامة</strong>
+                    التزام 100% بمعايير حماية بيانات المستخدمين مع لا جمع بيانات شخصية غير مرخصاه المستخدمين.
+                </li>
+                <li>
+                    <strong>💳 AML/KYC - مكافحة غسيل الأموال</strong>
+                    تحقق كامل من هوية العملاء قبل الولوج للعمليات مع تحديث مستمر للبيانات.
+                </li>
+                <li>
+                    <strong>🔒 OFAC - عقوبات خزانة أمريكا الهابطة</strong>
+                    فحص جميع عناوين العملاء ضد قائمة المتهمين OFAC مع منع عمليات مع كائنات معاقبة.
+                </li>
+                <li>
+                    <strong>📋 FinCEN - بلاغات عمليات مريبة</strong>
+                    بلاغ عن عمليات مريبة بحسب معايير FinCEN مع تقارير تفصيلية.
+                </li>
+                <li>
+                    <strong>📜 معايير محلية</strong>
+                    التزام بقوانين وتعليمات بياناتس الجهات التنظيمية المحلية.
+                </li>
+                <li>
+                    <strong>✅ عمليات تدقيق ثلاثية</strong>
+                    تدقيقات احترافية مارببة الأطراف بمعايير عالية لضمان بروالال.
+                </li>
             </ul>
+        </section>
 
-            <h3>إجراءات الإنفاذ</h3>
-            <ul class="compliance-list">
-                <li>عكس المعاملات للانتهاكات</li>
-                <li>تعليق الحساب أو إغلاقه الدائم</li>
-                <li>الاستيلاء على الأصول وفقاً للوائح</li>
-                <li>التقارير التنظيمية والتعاون</li>
-                <li>الإجراءات القانونية عند الحاجة</li>
-                <li>سياسة عدم التسامح للانتهاكات المتكررة</li>
-            </ul>
-        </div>
+        <!-- COMPLIANCE CHECKLIST -->
+        <section class="section">
+            <h2>✅ قائمة الالتزام</h2>
+            
+            <div class="checklist">
+                <ul>
+                    <li>بيانات مشفرة مباشرة على البلوكتشين</li>
+                    <li>عمليات مفتعة بالكامل (open source)</li>
+                    <li>دعم 24/7 من فريق قانوني متخصص</li>
+                    <li>بلاغ فوري عن عمليات مريبة</li>
+                    <li>تحديث بيانات AML/KYC مستمر</li>
+                    <li>مراقبة متعاملع OFAC 24/7</li>
+                    <li>شوفافية مالية كاملة</li>
+                    <li>لا جمع بيانات شخصية غير مرخصة</li>
+                </ul>
+            </div>
+        </section>
 
-        <!-- LEGAL COMMITMENTS -->
-        <div class="section">
-            <h2>الالتزامات القانونية الملزمة</h2>
+        <!-- CERTIFICATION -->
+        <section class="section">
+            <h2>📗 التشريعات والشهادات</h2>
+            <p>رمز ROUM يخضع لعمليات تدقيق رسمية من مسؤولين متخصصين بالامتثال المالي. نتوفر نتائج التدقيق بالعلنية.</p>
             
             <div class="highlight-box">
-                <h3>📜 اتفاق ملزم</h3>
-                <p>يلتزم ROUM Token قانوناً بالحفاظ على الامتثال لجميع المعايير الموضحة في هذه الوثيقة. ينتج عن انتهاك هذه الالتزامات خرق جوهري لإطار العمل التشغيلي الخاص بنا وقد يؤدي إلى تعليق التشغيل أو الإنهاء.</p>
-                <p><strong>هذه الوثيقة ملزمة قانوناً وقابلة للتنفيذ.</strong></p>
+                <h4>🌟 بلاغ المعايير</h4>
+                <p>التقت بقرار ملزم بسياسات وإجراءات بيناتس الذكي هو عمل رقيق لا يمكن التعرص له بطريقة ظاتية - بل يتطلب مشاركة نشطة من المجتمع.</p>
             </div>
-        </div>
+        </section>
 
-        <!-- REPORTING & TRANSPARENCY -->
-        <div class="section">
-            <h2>التقارير والشفافية</h2>
-            
-            <h3>التقارير المنتظمة</h3>
-            <ul class="compliance-list">
-                <li>تقارير الامتثال الفصلية للمساهمين</li>
-                <li>التدقيقات المستقلة السنوية</li>
-                <li>تحديثات تقييم المخاطر الشهرية</li>
-                <li>الإبلاغ الفوري عن الحوادث</li>
-                <li>لوحة معلومات الامتثال العامة</li>
+        <!-- CONTACT FOR COMPLIANCE -->
+        <section class="section">
+            <h2>📞 التواصل بشأن الالتزام</h2>
+            <p>للمزيد من المعلومات بشأن معايير الالتزام معنا:</p>
+            <ul style="margin-right: 2rem; margin-bottom: 1.5rem;">
+                <li><strong>بريد إلكتروني:</strong> compliance@roumtoken.com</li>
+                <li><strong>هاتف:</strong> +1-800-ROUM-COMPLIANCE</li>
+                <li><strong>موقع:</strong> https://roumtoken.com/compliance</li>
             </ul>
-
-            <h3>تدابير الشفافية</h3>
-            <ul class="compliance-list">
-                <li>الوثائق المفتوحة لجميع السياسات</li>
-                <li>الوصول العام إلى تقارير التدقيق</li>
-                <li>آليات ملاحظات المجتمع</li>
-                <li>إحاطات الامتثال المنتظمة</li>
-                <li>التحقق من الجهات الخارجية متاح</li>
-            </ul>
-        </div>
-
-        <!-- CONTACT & SUPPORT -->
-        <div class="section">
-            <h2>دعم الامتثال والاستفسارات</h2>
-            
-            <p>للأسئلة المتعلقة بالامتثال أو الاهتمامات أو الإبلاغ عن الانتهاكات المريبة:</p>
-            
-            <div class="framework-card">
-                <strong>📯 جهة الاتصال للامتثال</strong>
-                <p>البريد الإلكتروني: compliance@roumtoken.com</p>
-                <p>وقت الاستجابة: في غضون 24 ساعة عمل</p>
-            </div>
-
-            <div class="framework-card">
-                <strong>🖏 الإبلاغ عن الانتهاكات</strong>
-                <p>البريد الإلكتروني: security@roumtoken.com</p>
-                <p>خط ساخن على مدار 24 ساعة للتقارير العاجلة</p>
-            </div>
-        </div>
+        </section>
     </div>
 
     <!-- FOOTER -->
     <footer>
         <div class="footer-container">
             <div class="footer-section">
-                <h4>ROUM Token</h4>
-                <p>بناء البنية التحتية المالية للغد مع الشفافية والامتثال.</p>
+                <h4>رمز ROUM</h4>
+                <p>بناء البنية التحتية المالية الموثوقة مع الشفافية والامتثال الكامل.</p>
+                <div class="social-links">
+                    <a href="#" title="GitHub">💻</a>
+                    <a href="#" title="Telegram">✈️</a>
+                    <a href="#" title="Discord">💬</a>
+                    <a href="#" title="Twitter">𝕏</a>
+                </div>
             </div>
 
             <div class="footer-section">
-                <h4>الملاحة</h4>
-                <a href="https://osama-qonaibe.github.io/roum-token-website/">الرئيسية</a>
-                <a href="https://osama-qonaibe.github.io/roum-token-website/about.html">حول</a>
+                <h4>التنقل</h4>
+                <a href="https://osama-qonaibe.github.io/roum-token-website/index-ar.html">الرئيسية</a>
+                <a href="https://osama-qonaibe.github.io/roum-token-website/about-ar.html">عن الموقع</a>
                 <a href="https://osama-qonaibe.github.io/roum-token-website/compliance-ar.html">الامتثال</a>
-                <a href="https://osama-qonaibe.github.io/roum-token-website/legal.html">القانوني</a>
-                <a href="#contact">اتصل</a>
+                <a href="https://osama-qonaibe.github.io/roum-token-website/legal-ar.html">القانونية</a>
+                <a href="#contact">التواصل</a>
             </div>
 
             <div class="footer-section">
-                <h4>قانوني</h4>
-                <a href="https://osama-qonaibe.github.io/roum-token-website/legal.html#terms-of-service">شروط الخدمة</a>
-                <a href="https://osama-qonaibe.github.io/roum-token-website/legal.html#privacy-policy">سياسة الخصوصية</a>
-                <a href="https://osama-qonaibe.github.io/roum-token-website/legal.html#disclaimer">تحرير المسؤولية</a>
-                <a href="https://osama-qonaibe.github.io/roum-token-website/legal.html#cookies-policy">سياسة الكوكيز</a>
+                <h4>القانونية</h4>
+                <a href="https://osama-qonaibe.github.io/roum-token-website/legal-ar.html#terms-of-service">شروط الخدمة</a>
+                <a href="https://osama-qonaibe.github.io/roum-token-website/legal-ar.html#privacy-policy">سياسة الخصوصية</a>
+                <a href="https://osama-qonaibe.github.io/roum-token-website/legal-ar.html#disclaimer">إخلاء مسؤولية</a>
+                <a href="https://osama-qonaibe.github.io/roum-token-website/legal-ar.html#cookies-policy">سياسة ملفات تعريف الارتباط</a>
             </div>
 
             <div class="footer-section">
                 <h4>الموارد</h4>
                 <a href="https://osama-qonaibe.github.io/roum-token-website/compliance-ar.html">معايير الامتثال</a>
-                <a href="https://osama-qonaibe.github.io/roum-token-website/legal.html#contact-legal">اتصل بالقسم القانوني</a>
-                <a href="#">التوثيق</a>
+                <a href="https://osama-qonaibe.github.io/roum-token-website/legal-ar.html#contact-legal">التواصل القانوني</a>
+                <a href="https://osama-qonaibe.github.io/roum-token-website/about-ar.html">عن المطور</a>
                 <a href="#contact">الدعم</a>
             </div>
         </div>
 
         <div class="footer-bottom">
-            <p>&copy; 2025 ROUM Token. جميع الحقوق محفوظة.</p>
-            <p>معايير الامتثال | آخر تحديث: 26 ديسمبر 2025</p>
+            <p>&copy; 2025 رمز ROUM. جميع الحقوق محفوظة.</p>
+            <p>بيناتس الذكي | منصة DeFi احترافية</p>
+            <p style="font-size: 0.85rem; margin-top: 1rem;">
+                "بناء البنية التحتية المالية للغد مع الشفافية والامتثال الكامل."
+            </p>
         </div>
     </footer>
 
     <script>
         function switchLanguage(lang) {
-            if (lang === 'en') {
-                window.location.href = 'https://osama-qonaibe.github.io/roum-token-website/compliance.html';
-            } else if (lang === 'ar') {
+            if (lang === 'ar') {
                 window.location.href = 'https://osama-qonaibe.github.io/roum-token-website/compliance-ar.html';
+            } else if (lang === 'en') {
+                window.location.href = 'https://osama-qonaibe.github.io/roum-token-website/compliance.html';
             }
         }
     </script>
