@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ROUM Token - Rumeida Heritage cryptocurrency on Binance Smart Chain. Audited, Verified, and Secure. Professional financial infrastructure with transparency and compliance.">
+    <meta name="keywords" content="ROUM Token, Rumeida Heritage, Cryptocurrency, Binance Smart Chain, DeFi, Blockchain">
+    <meta name="author" content="Osama Qonaibe">
+    <meta property="og:title" content="ROUM Token - Rumeida Heritage">
+    <meta property="og:description" content="Professional cryptocurrency platform on Binance Smart Chain">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="assets/images/banner.jpg">
+    <title>ROUM Token - Rumeida Heritage | Binance Smart Chain</title>
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;600;700;800;900&family=Almarai:wght@300;400;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+
+        /* 🎨 Brand Color System - ROUM Token Professional Identity */
+        :root {
+            --color-primary: #D4AF37;
+            --color-primary-light: #E6C060;
+            --color-primary-dark: #B8860B;
+            --color-bg-dark: #5E5240;
+            --color-bg-light: #C9A961;
+            --color-bg-cream: #FFF8F0;
+            --color-bg-chocolate: #6B5A4A;
+            --color-text-primary: #5E5240;
+            --color-text-light: #FFF8F0;
+            --color-text-white: #FFFFFF;
+            --color-accent-teal: #32B8C6;
+            --color-border: #D4AF37;
+            --color-shadow: rgba(94, 82, 64, 0.15);
+            --color-divider: #E6C060;
+            
+            /* 🔤 Typography - Modern Fintech Fonts */
+            --font-main: 'Tajawal', 'Almarai', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-main);
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 1.8;
+            color: var(--color-text-primary);
+            background-color: var(--color-bg-cream);
+        }
+
+        /* 🔝 HEADER & NAVIGATION */
+        header {
+            background: linear-gradient(135deg, var(--color-bg-dark) 0%, var(--color-bg-chocolate) 100%);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px var(--color-shadow);
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        html[dir="rtl"] .header-container {
+            flex-direction: row-reverse;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            text-decoration: none;
+            color: var(--color-text-light);
+        }
+
+        html[dir="rtl"] .logo {
+            flex-direction: row-reverse;
+        }
+
+        .logo-image {
+            width: 50px;
+            height: 50px;
+            background: var(--color-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: var(--color-bg-dark);
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+            flex-shrink: 0;
+        }
+
+        .logo-text h1 {
+            font-size: 1.5rem;
+            margin: 0;
+            color: var(--color-primary);
+            letter-spacing: 2px;
+            font-weight: 700;
+        }
+
+        .logo-text p {
+            font-size: 0.75rem;
+            margin: 0;
+            color: var(--color-text-light);
+            letter-spacing: 1px;
+            font-weight: 600;
+        }
+
+        .header-right {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        html[dir="rtl"] .header-right {
+            flex-direction: row-reverse;
+        }
+
+        nav {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        html[dir="rtl"] nav {
+            flex-direction: row-reverse;
+        }
+
+        nav a {
+            color: var(--color-text-light);
+            text-decoration: none;
+            padding: 0.5rem 0;
+            border-bottom: 2px solid transparent;
+            transition: all 0.3s ease;
+            font-weight: 500;
+            font-size: 0.95rem;
+            white-space: nowrap;
+        }
+
+        nav a:hover {
+            color: var(--color-primary);
+            border-bottom-color: var(--color-primary);
+        }
+
+        /* 🌐 Language Switcher */
+        .lang-switcher {
+            display: flex;
+            gap: 0.5rem;
+            align-items: center;
+            background: rgba(212, 175, 55, 0.1);
+            padding: 0.5rem 0.75rem;
+            border-radius: 6px;
+            border: 1px solid var(--color-primary);
+        }
+
+        .lang-switcher button {
+            background: none;
+            border: none;
+            color: var(--color-text-light);
+            cursor: pointer;
+            padding: 0.4rem 0.8rem;
+            border-radius: 4px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+            font-family: var(--font-main);
+            white-space: nowrap;
+        }
+
+        .lang-switcher button.active {
+            background: var(--color-primary);
+            color: var(--color-bg-dark);
+        }
+
+        .lang-switcher button:hover:not(.active) {
+            background: rgba(212, 175, 55, 0.2);
+            color: var(--color-primary);
+        }
+
+        /* 🎯 HERO SECTION */
+        .hero {
+            background: linear-gradient(135deg, var(--color-bg-light) 0%, #8B7355 50%, var(--color-bg-dark) 100%);
+            color: var(--color-text-light);
+            padding: 6rem 2rem;
+            text-align: center;
+        }
+
+        .hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .hero h2 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            font-weight: 800;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            letter-spacing: 2px;
+        }
+
+        html[dir="rtl"] .hero h2 {
+            letter-spacing: 1px;
+        }
+
+        .hero-subtitle {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            font-weight: 400;
+        }
+
+        .hero-badges {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+
+        html[dir="rtl"] .hero-badges {
+            flex-direction: row-reverse;
+        }
+
+        .badge {
+            background: rgba(255, 255, 255, 0.15);
+            border: 2px solid var(--color-primary);
+            border-radius: 50px;
+            padding: 0.75rem 1.5rem;
+            color: var(--color-primary);
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            backdrop-filter: blur(10px);
+            font-size: 0.95rem;
+        }
+
+        html[dir="rtl"] .badge {
+            flex-direction: row-reverse;
+        }
+
+        .badge::before {
+            content: '✓';
+            font-weight: 900;
+            flex-shrink: 0;
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        html[dir="rtl"] .cta-buttons {
+            flex-direction: row-reverse;
+        }
+
+        .btn {
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            border: none;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            letter-spacing: 0.5px;
+            font-family: var(--font-main);
+        }
+
+        .btn-primary {
+            background: var(--color-primary);
+            color: var(--color-bg-dark);
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
+        }
+
+        .btn-primary:hover {
+            background: var(--color-primary-light);
+            transform: translateY(-2px);
+            box-shadow: 0 15px 40px rgba(212, 175, 55, 0.4);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--color-text-light);
+            border: 2px solid var(--color-text-light);
+        }
+
+        .btn-secondary:hover {
+            background: var(--color-text-light);
+            color: var(--color-bg-dark);
+        }
+
+        /* ⭐ FEATURES SECTION */
+        .features {
+            max-width: 1200px;
+            margin: 4rem auto;
+            padding: 0 2rem;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: var(--color-text-primary);
+            position: relative;
+            padding-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, var(--color-primary), transparent);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .feature-card {
+            background: var(--color-bg-cream);
+            border: 2px solid var(--color-border);
+            border-radius: 12px;
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px var(--color-shadow);
+        }
+
+        html[dir="rtl"] .feature-card {
+            text-align: right;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.3), 0 15px 40px var(--color-shadow);
+            border-color: var(--color-primary-light);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .feature-card h3 {
+            color: var(--color-primary);
+            margin-bottom: 1rem;
+            font-size: 1.25rem;
+            font-weight: 700;
+        }
+
+        .feature-card p {
+            color: var(--color-text-primary);
+            font-size: 0.95rem;
+            line-height: 1.7;
+            font-weight: 400;
+        }
+
+        /* 🏦 COMPLIANCE HIGHLIGHT */
+        .compliance-section {
+            background: linear-gradient(135deg, var(--color-bg-dark) 0%, var(--color-bg-chocolate) 100%);
+            color: var(--color-text-light);
+            padding: 4rem 2rem;
+            margin: 4rem 0;
+            border-radius: 12px;
+        }
+
+        .compliance-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        html[dir="rtl"] .compliance-container {
+            text-align: right;
+        }
+
+        .compliance-section h3 {
+            color: var(--color-primary);
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+            font-weight: 700;
+        }
+
+        .compliance-section p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            line-height: 1.8;
+            font-weight: 400;
+        }
+
+        .compliance-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .compliance-item {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--color-primary);
+        }
+
+        html[dir="rtl"] .compliance-item {
+            border-left: none;
+            border-right: 4px solid var(--color-primary);
+            text-align: right;
+        }
+
+        .compliance-item strong {
+            color: var(--color-primary);
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+            font-size: 1rem;
+        }
+
+        .compliance-item span {
+            font-weight: 400;
+            font-size: 0.9rem;
+        }
+
+        /* 📊 STATS SECTION */
+        .stats {
+            max-width: 1200px;
+            margin: 4rem auto;
+            padding: 0 2rem;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .stat-box {
+            background: var(--color-bg-cream);
+            border: 2px solid var(--color-divider);
+            padding: 2rem;
+            text-align: center;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+        }
+
+        html[dir="rtl"] .stat-box {
+            text-align: right;
+        }
+
+        .stat-box:hover {
+            border-color: var(--color-primary);
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.2);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            color: var(--color-primary);
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            color: var(--color-text-primary);
+            font-size: 1rem;
+            font-weight: 600;
+        }
+
+        /* 📝 FOOTER */
+        footer {
+            background: linear-gradient(180deg, var(--color-bg-dark) 0%, #3a3230 100%);
+            color: var(--color-text-light);
+            padding: 3rem 2rem;
+            margin-top: 4rem;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        html[dir="rtl"] .footer-container {
+            direction: rtl;
+        }
+
+        .footer-section h4 {
+            color: var(--color-primary);
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+            font-weight: 700;
+        }
+
+        .footer-section a {
+            color: var(--color-text-light);
+            text-decoration: none;
+            display: block;
+            margin-bottom: 0.5rem;
+            transition: color 0.3s ease;
+            font-weight: 400;
+            font-size: 0.95rem;
+        }
+
+        .footer-section a:hover {
+            color: var(--color-primary);
+        }
+
+        .footer-section p {
+            font-weight: 400;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        html[dir="rtl"] .social-links {
+            flex-direction: row-reverse;
+        }
+
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(212, 175, 55, 0.1);
+            border-radius: 50%;
+            transition: all 0.3s ease;
+            margin: 0 !important;
+        }
+
+        .social-links a:hover {
+            background: var(--color-primary);
+            color: var(--color-bg-dark);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(212, 175, 55, 0.2);
+            padding-top: 2rem;
+            text-align: center;
+            color: var(--color-text-light);
+        }
+
+        html[dir="rtl"] .footer-bottom {
+            text-align: right;
+        }
+
+        .footer-bottom p {
+            margin: 0.5rem 0;
+            opacity: 0.9;
+            font-weight: 400;
+            font-size: 0.95rem;
+        }
+
+        /* 📱 RESPONSIVE DESIGN */
+        @media (max-width: 768px) {
+            .header-container {
+                flex-wrap: wrap;
+                gap: 1rem;
+            }
+
+            .header-right {
+                flex-direction: column;
+                width: 100%;
+                gap: 1rem;
+            }
+
+            html[dir="rtl"] .header-right {
+                flex-direction: column-reverse;
+            }
+
+            nav {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 0.5rem;
+            }
+
+            nav a {
+                font-size: 0.9rem;
+            }
+
+            .hero h2 {
+                font-size: 2.5rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            html[dir="rtl"] .cta-buttons {
+                flex-direction: column-reverse;
+            }
+
+            .btn {
+                width: 100%;
+                max-width: 300px;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .compliance-list {
+                grid-template-columns: 1fr;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero {
+                padding: 3rem 1rem;
+            }
+
+            .hero h2 {
+                font-size: 2rem;
+            }
+
+            .section-title {
+                font-size: 1.75rem;
+            }
+
+            .hero-badges {
+                flex-direction: column;
+                gap: 0.75rem;
+            }
+
+            html[dir="rtl"] .hero-badges {
+                flex-direction: column;
+            }
+
+            .badge {
+                justify-content: center;
+                width: 100%;
+                max-width: 200px;
+                margin: 0 auto;
+            }
+
+            .logo-text h1 {
+                font-size: 1.25rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <div class="header-container">
+            <a href="./" class="logo">
+                <div class="logo-image">R</div>
+                <div class="logo-text">
+                    <h1>ROUM</h1>
+                    <p data-i18n="logo-subtitle" class="logo-subtitle">HERITAGE</p>
+                </div>
+            </a>
+            <div class="header-right">
+                <nav>
+                    <a href="./" data-i18n="nav.home">Home</a>
+                    <a href="./about" data-i18n="nav.about">About</a>
+                    <a href="./compliance" data-i18n="nav.compliance">Compliance</a>
+                    <a href="./legal" data-i18n="nav.legal">Legal</a>
+                    <a href="#contact" data-i18n="nav.contact">Contact</a>
+                </nav>
+                <div class="lang-switcher">
+                    <button data-lang-switch="en" data-i18n="language.english">English</button>
+                    <button data-lang-switch="ar" data-i18n="language.arabic">العربية</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-container">
+            <h2 data-i18n="hero.title">ROUM Token</h2>
+            <p class="hero-subtitle" data-i18n="hero.subtitle">Rumeida Heritage - Building Tomorrow's Financial Infrastructure</p>
+            
+            <div class="hero-badges">
+                <div class="badge" data-i18n="hero.badge_audited">Audited</div>
+                <div class="badge" data-i18n="hero.badge_verified">Verified</div>
+                <div class="badge" data-i18n="hero.badge_secure">Secure</div>
+            </div>
+
+            <div class="cta-buttons">
+                <button class="btn btn-primary" data-i18n="hero.cta_primary">Get Started</button>
+                <button class="btn btn-secondary" data-i18n="hero.cta_secondary">Learn More</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="features">
+        <h2 class="section-title" data-i18n="features.section_title">Why Choose ROUM Token</h2>
+        
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">🔒</div>
+                <h3 data-i18n="features.security.title">Security First</h3>
+                <p data-i18n="features.security.description">Industry-leading security standards with professional audits and continuous monitoring</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">✅</div>
+                <h3 data-i18n="features.compliance.title">Compliance</h3>
+                <p data-i18n="features.compliance.description">100% Binance Smart Chain compliant with GDPR, AML/KYC, and OFAC standards</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">⚡</div>
+                <h3 data-i18n="features.fast.title">Fast & Efficient</h3>
+                <p data-i18n="features.fast.description">Lightning-fast transactions on Binance Smart Chain with minimal fees</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">🌍</div>
+                <h3 data-i18n="features.global.title">Global Access</h3>
+                <p data-i18n="features.global.description">Available to users worldwide with transparent and professional operations</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">📊</div>
+                <h3 data-i18n="features.transparent.title">Transparent</h3>
+                <p data-i18n="features.transparent.description">Complete transparency in tokenomics, governance, and financial reporting</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">🤝</div>
+                <h3 data-i18n="features.community.title">Community Driven</h3>
+                <p data-i18n="features.community.description">Built for the community with active engagement and regular updates</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- COMPLIANCE HIGHLIGHT -->
+    <section class="compliance-section">
+        <div class="compliance-container">
+            <h3 data-i18n="compliance_section.title">🏦 Professional Compliance Standards</h3>
+            <p data-i18n="compliance_section.description">ROUM Token maintains the highest standards of regulatory compliance across all markets and jurisdictions. We are committed to 100% Binance Smart Chain compliance with zero exceptions.</p>
+            
+            <div class="compliance-list">
+                <div class="compliance-item">
+                    <strong data-i18n="compliance_section.gdpr.label">GDPR</strong>
+                    <span data-i18n="compliance_section.gdpr.description">EU Data Protection</span>
+                </div>
+                <div class="compliance-item">
+                    <strong data-i18n="compliance_section.aml_kyc.label">AML/KYC</strong>
+                    <span data-i18n="compliance_section.aml_kyc.description">Anti-Money Laundering</span>
+                </div>
+                <div class="compliance-item">
+                    <strong data-i18n="compliance_section.ofac.label">OFAC</strong>
+                    <span data-i18n="compliance_section.ofac.description">US Sanctions Compliance</span>
+                </div>
+                <div class="compliance-item">
+                    <strong data-i18n="compliance_section.fincen.label">FinCEN</strong>
+                    <span data-i18n="compliance_section.fincen.description">Financial Intelligence</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- STATS -->
+    <section class="stats">
+        <h2 class="section-title" data-i18n="stats.section_title">ROUM Token Overview</h2>
+        
+        <div class="stats-grid">
+            <div class="stat-box">
+                <div class="stat-number" data-i18n="stats.compliance_value">100%</div>
+                <div class="stat-label" data-i18n="stats.compliance_label">Binance Compliant</div>
+            </div>
+
+            <div class="stat-box">
+                <div class="stat-number">✅</div>
+                <div class="stat-label" data-i18n="stats.audit_label">Professionally Audited</div>
+            </div>
+
+            <div class="stat-box">
+                <div class="stat-number">🔐</div>
+                <div class="stat-label" data-i18n="stats.security_label">Security Verified</div>
+            </div>
+
+            <div class="stat-box">
+                <div class="stat-number" data-i18n="stats.support_value">24/7</div>
+                <div class="stat-label" data-i18n="stats.support_label">Active Support</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4 data-i18n="footer.about_title">ROUM Token</h4>
+                <p data-i18n="footer.about_desc">Building tomorrow's financial infrastructure with transparency and compliance.</p>
+                <div class="social-links">
+                    <a href="#" title="Twitter">𝕏</a>
+                    <a href="#" title="Discord">💬</a>
+                    <a href="#" title="Telegram">✈️</a>
+                    <a href="#" title="GitHub">💻</a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h4 data-i18n="footer.nav_title">Navigation</h4>
+                <a href="./" data-i18n="footer.nav_home">Home</a>
+                <a href="./about" data-i18n="footer.nav_about">About Us</a>
+                <a href="./compliance" data-i18n="footer.nav_compliance">Compliance</a>
+                <a href="./legal" data-i18n="footer.nav_legal">Legal</a>
+                <a href="#contact" data-i18n="footer.nav_contact">Contact</a>
+            </div>
+
+            <div class="footer-section">
+                <h4 data-i18n="footer.legal_title">Legal</h4>
+                <a href="./legal#terms-of-service" data-i18n="footer.legal_terms">Terms of Service</a>
+                <a href="./legal#privacy-policy" data-i18n="footer.legal_privacy">Privacy Policy</a>
+                <a href="./legal#disclaimer" data-i18n="footer.legal_disclaimer">Disclaimer</a>
+                <a href="./legal#cookies-policy" data-i18n="footer.legal_cookies">Cookie Policy</a>
+            </div>
+
+            <div class="footer-section">
+                <h4 data-i18n="footer.resources_title">Resources</h4>
+                <a href="./compliance" data-i18n="footer.resources_standards">Compliance Standards</a>
+                <a href="./legal#contact-legal" data-i18n="footer.resources_legal_contact">Contact Legal</a>
+                <a href="./about" data-i18n="footer.resources_developer">About Developer</a>
+                <a href="#contact" data-i18n="footer.resources_support">Support</a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p data-i18n="footer.copyright">&copy; 2025 ROUM Token. All rights reserved.</p>
+            <p data-i18n="footer.tagline">Binance Smart Chain | Professional DeFi Platform</p>
+            <p style="font-size: 0.85rem; margin-top: 1rem;" data-i18n="footer.mission">
+                "Building tomorrow's financial infrastructure with transparency and compliance."
+            </p>
+        </div>
+    </footer>
+
+    <!-- i18n System -->
+    <script src="./i18n/i18n.js"></script>
+    <script>
+        // DOM Content Loaded - Update all translations
+        document.addEventListener('DOMContentLoaded', function() {
+            updateAllTranslations();
+        });
+
+        // Listen for language changes
+        window.addEventListener('languageChanged', function() {
+            updateAllTranslations();
+        });
+
+        // Language switcher integration
+        document.querySelectorAll('[data-lang-switch]').forEach(button => {
+            button.addEventListener('click', function(e) {
+                e.preventDefault();
+                const lang = this.getAttribute('data-lang-switch');
+                i18n.switchLanguage(lang);
+                updateAllTranslations();
+            });
+        });
+
+        function updateAllTranslations() {
+            // Update all elements with data-i18n attribute
+            document.querySelectorAll('[data-i18n]').forEach(element => {
+                const key = element.getAttribute('data-i18n');
+                const text = i18n.t(key);
+                
+                // Determine if it's HTML content or text content
+                if (element.children.length > 0) {
+                    // Has child elements, update text nodes only
+                    element.childNodes.forEach(node => {
+                        if (node.nodeType === Node.TEXT_NODE) {
+                            node.textContent = text;
+                        }
+                    });
+                } else {
+                    // No children, safe to update innerHTML/textContent
+                    element.textContent = text;
+                }
+            });
+
+            // Update buttons with active state
+            document.querySelectorAll('[data-lang-switch]').forEach(button => {
+                const lang = button.getAttribute('data-lang-switch');
+                if (lang === i18n.getCurrentLanguage()) {
+                    button.classList.add('active');
+                } else {
+                    button.classList.remove('active');
+                }
+            });
+        }
+    </script>
+</body>
+</html>
