@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="معرفة مزيد عن رمز ROUM - رؤيتنا، رسالتنا، ولماذا نحن لائدو في عالم التمويل اللامركزي.">
+    <meta name="keywords" content="عن ROUM، رؤية ROUM، رسالة ROUM، بيناتس الذكي، العملات المشفرة">
+    <meta name="author" content="أسامة قونيبة">
+    <title>عننا - رمز ROUM</title>
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+
+        :root {
+            --color-primary: #D4AF37;
+            --color-primary-light: #E6C060;
+            --color-primary-dark: #B8860B;
+            --color-bg-dark: #5E5240;
+            --color-bg-light: #C9A961;
+            --color-bg-cream: #FFF8F0;
+            --color-bg-chocolate: #6B5A4A;
+            --color-text-primary: #5E5240;
+            --color-text-light: #FFF8F0;
+            --color-text-white: #FFFFFF;
+            --color-accent-teal: #32B8C6;
+            --color-border: #D4AF37;
+            --color-shadow: rgba(94, 82, 64, 0.15);
+            --color-divider: #E6C060;
+            --font-main: 'Cairo', sans-serif;
+            --font-mono: 'JetBrains Mono', monospace;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-main);
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 1.8;
+            color: var(--color-text-primary);
+            background-color: var(--color-bg-cream);
+            text-align: right;
+            direction: rtl;
+        }
+
+        /* HEADER & NAVIGATION */
+        header {
+            background: linear-gradient(135deg, var(--color-bg-dark) 0%, var(--color-bg-chocolate) 100%);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px var(--color-shadow);
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: row-reverse;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            text-decoration: none;
+            color: var(--color-text-light);
+        }
+
+        .logo-image {
+            width: 50px;
+            height: 50px;
+            background: var(--color-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: var(--color-bg-dark);
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+        }
+
+        .logo-text h1 {
+            font-size: 1.5rem;
+            margin: 0;
+            color: var(--color-primary);
+            letter-spacing: 2px;
+            font-weight: 700;
+        }
+
+        .logo-text p {
+            font-size: 0.75rem;
+            margin: 0;
+            color: var(--color-text-light);
+            letter-spacing: 1px;
+            font-weight: 500;
+        }
+
+        .header-right {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            flex-direction: row;
+        }
+
+        nav {
+            display: flex;
+            gap: 1.5rem;
+            flex-direction: row;
+        }
+
+        nav a {
+            color: var(--color-text-light);
+            text-decoration: none;
+            padding: 0.5rem 0;
+            border-bottom: 2px solid transparent;
+            transition: all 0.3s ease;
+            font-weight: 500;
+            font-size: 0.95rem;
+        }
+
+        nav a:hover {
+            color: var(--color-primary);
+            border-bottom-color: var(--color-primary);
+        }
+
+        /* Language Switcher */
+        .lang-switcher {
+            display: flex;
+            gap: 0.5rem;
+            align-items: center;
+            background: rgba(212, 175, 55, 0.1);
+            padding: 0.5rem 0.75rem;
+            border-radius: 6px;
+            border: 1px solid var(--color-primary);
+        }
+
+        .lang-switcher button {
+            background: none;
+            border: none;
+            color: var(--color-text-light);
+            cursor: pointer;
+            padding: 0.4rem 0.8rem;
+            border-radius: 4px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+            font-family: var(--font-main);
+        }
+
+        .lang-switcher button.active {
+            background: var(--color-primary);
+            color: var(--color-bg-dark);
+        }
+
+        .lang-switcher button:hover:not(.active) {
+            background: rgba(212, 175, 55, 0.2);
+            color: var(--color-primary);
+        }
+
+        /* PAGE HEADER */
+        .page-header {
+            background: linear-gradient(135deg, var(--color-bg-light) 0%, #8B7355 50%, var(--color-bg-dark) 100%);
+            color: var(--color-text-light);
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .page-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: 800;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            letter-spacing: 1px;
+        }
+
+        .page-header p {
+            font-size: 1.1rem;
+            opacity: 0.95;
+            max-width: 600px;
+            margin: 0 auto;
+            font-weight: 400;
+        }
+
+        /* MAIN CONTENT */
+        .main-content {
+            max-width: 1000px;
+            margin: 4rem auto;
+            padding: 0 2rem;
+        }
+
+        .section {
+            margin-bottom: 4rem;
+        }
+
+        .section h2 {
+            font-size: 2rem;
+            color: var(--color-primary);
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .section h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--color-primary), transparent);
+        }
+
+        .section h3 {
+            font-size: 1.5rem;
+            color: var(--color-bg-dark);
+            margin: 1.5rem 0 1rem 0;
+            font-weight: 600;
+        }
+
+        .section p {
+            font-size: 1rem;
+            line-height: 1.8;
+            color: var(--color-text-primary);
+            margin-bottom: 1rem;
+            font-weight: 400;
+        }
+
+        .section ul {
+            margin-right: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .section li {
+            margin-bottom: 0.75rem;
+            font-size: 1rem;
+            line-height: 1.7;
+            font-weight: 400;
+            color: var(--color-text-primary);
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.1), rgba(201, 169, 97, 0.1));
+            border-right: 4px solid var(--color-primary);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .highlight-box h4 {
+            color: var(--color-primary);
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+
+        .highlight-box p {
+            margin: 0;
+            font-weight: 400;
+        }
+
+        .quote {
+            border-right: 4px solid var(--color-primary);
+            padding-right: 1.5rem;
+            margin: 2rem 0;
+            font-style: italic;
+            color: var(--color-bg-dark);
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+
+        /* VALUES GRID */
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .value-card {
+            background: var(--color-bg-cream);
+            border: 2px solid var(--color-divider);
+            border-radius: 8px;
+            padding: 1.5rem;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .value-card:hover {
+            border-color: var(--color-primary);
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.2);
+        }
+
+        .value-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .value-card h4 {
+            color: var(--color-primary);
+            margin-bottom: 0.75rem;
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+
+        .value-card p {
+            color: var(--color-text-primary);
+            font-size: 0.95rem;
+            font-weight: 400;
+            line-height: 1.6;
+        }
+
+        /* TIMELINE */
+        .timeline {
+            position: relative;
+            padding: 2rem 0 2rem 2rem;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 0;
+            height: 100%;
+            width: 3px;
+            background: linear-gradient(180deg, var(--color-primary), transparent);
+        }
+
+        .timeline-item {
+            margin-bottom: 2rem;
+            position: relative;
+            padding-bottom: 1rem;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            right: -8px;
+            top: 0;
+            width: 16px;
+            height: 16px;
+            background: var(--color-primary);
+            border-radius: 50%;
+            border: 3px solid var(--color-bg-cream);
+        }
+
+        .timeline-item h4 {
+            color: var(--color-primary);
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .timeline-item p {
+            color: var(--color-text-primary);
+            font-weight: 400;
+            margin: 0;
+        }
+
+        /* FOOTER */
+        footer {
+            background: linear-gradient(180deg, var(--color-bg-dark) 0%, #3a3230 100%);
+            color: var(--color-text-light);
+            padding: 3rem 2rem;
+            margin-top: 4rem;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h4 {
+            color: var(--color-primary);
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+            font-weight: 700;
+        }
+
+        .footer-section a {
+            color: var(--color-text-light);
+            text-decoration: none;
+            display: block;
+            margin-bottom: 0.5rem;
+            transition: color 0.3s ease;
+            font-weight: 400;
+            font-size: 0.95rem;
+        }
+
+        .footer-section a:hover {
+            color: var(--color-primary);
+        }
+
+        .footer-section p {
+            font-weight: 400;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+            flex-direction: row-reverse;
+        }
+
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(212, 175, 55, 0.1);
+            border-radius: 50%;
+            transition: all 0.3s ease;
+            margin: 0;
+        }
+
+        .social-links a:hover {
+            background: var(--color-primary);
+            color: var(--color-bg-dark);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(212, 175, 55, 0.2);
+            padding-top: 2rem;
+            text-align: center;
+            color: var(--color-text-light);
+        }
+
+        .footer-bottom p {
+            margin: 0.5rem 0;
+            opacity: 0.9;
+            font-weight: 400;
+            font-size: 0.95rem;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .header-container {
+                flex-wrap: wrap;
+                gap: 1rem;
+            }
+
+            .header-right {
+                flex-direction: column-reverse;
+                width: 100%;
+                gap: 1rem;
+            }
+
+            nav {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 0.5rem;
+            }
+
+            nav a {
+                font-size: 0.8rem;
+                margin: 0 0.25rem;
+            }
+
+            .page-header h1 {
+                font-size: 2rem;
+            }
+
+            .page-header p {
+                font-size: 1rem;
+            }
+
+            .section h2 {
+                font-size: 1.75rem;
+            }
+
+            .values-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .main-content {
+                margin: 2rem auto;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .page-header {
+                padding: 2rem 1rem;
+            }
+
+            .page-header h1 {
+                font-size: 1.75rem;
+            }
+
+            .section {
+                margin-bottom: 2rem;
+            }
+
+            .section h2 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <div class="header-container">
+            <div class="header-right">
+                <div class="lang-switcher">
+                    <button onclick="switchLanguage('ar')">العربية</button>
+                    <button class="active" onclick="switchLanguage('en')">English</button>
+                </div>
+                <nav>
+                    <a href="#contact">التواصل</a>
+                    <a href="https://osama-qonaibe.github.io/roum-token-website/legal-ar.html">القانونية</a>
+                    <a href="https://osama-qonaibe.github.io/roum-token-website/compliance-ar.html">الامتثال</a>
+                    <a href="https://osama-qonaibe.github.io/roum-token-website/about-ar.html">عننا</a>
+                    <a href="https://osama-qonaibe.github.io/roum-token-website/index-ar.html">الرئيسية</a>
+                </nav>
+            </div>
+            <a href="https://osama-qonaibe.github.io/roum-token-website/index-ar.html" class="logo">
+                <div class="logo-image">R</div>
+                <div class="logo-text">
+                    <h1>ROUM</h1>
+                    <p>إرث</p>
+                </div>
+            </a>
+        </div>
+    </header>
+
+    <!-- PAGE HEADER -->
+    <section class="page-header">
+        <h1>عن رمز ROUM</h1>
+        <p>تعرف على رؤيتنا ورسالتنا والقيم التي تحركنا</p>
+    </section>
+
+    <!-- MAIN CONTENT -->
+    <div class="main-content">
+        <!-- OUR MISSION -->
+        <section class="section">
+            <h2>🌟 رسالتنا</h2>
+            <p>رسالتنا هي بناء البنية التحتية المالية اللامركزية (DeFi) الموثوقة والشفافة لغد اللافلين والمؤسسات على حد سواء عبر بيناتس الذكي.</p>
+            
+            <div class="quote">
+                "إذا لم تكن مشفرة، فليست معولة. الشفافية ليست طلب حادب - واطجب للآلير."
+            </div>
+
+            <p>رمز ROUM لا يختزن أموالك - أنت بتحكم بسالبيع بمفاتيحك. فقط رسوم نا عادلة وشلفافة، لا ل شروط مخفية أو رسوم تفاجءة.</p>
+        </section>
+
+        <!-- OUR VISION -->
+        <section class="section">
+            <h2>🔑 رؤيتنا</h2>
+            <p>رؤيتنا هي عالم بدون وسطائط. عالم تتحكم فيه الجماهير بأشكالها بعيدة عن المؤسسات المركزية.</p>
+            
+            <div class="highlight-box">
+                <h4>🌟 مبادئ الرؤية</h4>
+                <ul style="margin: 1rem 0; padding-right: 1rem;">
+                    <li><strong>اللامركزية:</strong> بناء سيطرة بالمستخدمين النهاية</li>
+                    <li><strong>البركوليسيا:</strong> سلاسل لا توافق علنية وعدالة</li>
+                    <li><strong>الملكية:</strong> بناء مالية للناس بالراسب الاليام بهم</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- OUR VALUES -->
+        <section class="section">
+            <h2>💫 قيمنا الأساسية</h2>
+            
+            <div class="values-grid">
+                <div class="value-card">
+                    <div class="value-icon">🔏</div>
+                    <h4>الشفافية</h4>
+                    <p>معاملات بالوضوح الكامل وبدون متغيرات أو استرباتات مخفية.</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-icon">🔒</div>
+                    <h4>الأمان</h4>
+                    <p>معايير أمان من الطراز الأول مع عمليات تدقيق مستمرة.</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-icon">✅</div>
+                    <h4>الامتثال</h4>
+                    <p>التزام بمعايير GDPR, AML/KYC, OFAC 100%.</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-icon">🤝</div>
+                    <h4>مجتمع أولاً</h4>
+                    <p>قرارات حكمة ومبادرة جلب للمجتمع.</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-icon">🌐</div>
+                    <h4>وصول عالمي</h4>
+                    <p>متاح للمستخدمين في جميع أنحاء العالم.</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-icon">🚀</div>
+                    <h4>الابتكار</h4>
+                    <p>تطوير مستمر للتكنولوجيا الأحدثة.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- OUR HISTORY -->
+        <section class="section">
+            <h2>📅 اربه وروحنا</h2>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h4>2024 مرحلة الاستعداد</h4>
+                    <p>بدة رحلة تطوير رمز ROUM مع عمال بحثية معمقة وتخطيط استراتيجي.</p>
+                </div>
+                
+                <div class="timeline-item">
+                    <h4>2025 مرحلة التطوير</h4>
+                    <p>البدء ببناء البذب الألعباف والاشرتفاع بعقود حكمة وتدقيقات احترافية.</p>
+                </div>
+                
+                <div class="timeline-item">
+                    <h4>2025 - Q2/Q3 مرحلة الإطلاق</h4>
+                    <p>الإطلاق الرسمي لرمز ROUM على بيناتس الذكي مع بدظ أولية مالية محافظ.</p>
+                </div>
+                
+                <div class="timeline-item">
+                    <h4>2025-2026 مرحلة النمو</h4>
+                    <p>التوسع للأسواق العالمية مع الاسرحار بقعائد جديدة ومرافق محسّنة.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- OUR TEAM -->
+        <section class="section">
+            <h2>📱 فريقنا</h2>
+            <p>فريق ROUM يتألف من متخصصين مع خبرة عميقة في البيناتس والعملات المشفرة والطب القانوني.</p>
+            
+            <h3>مته نهم:</h3>
+            <ul>
+                <li><strong>مهندسو بيناتس:</strong> مالك ومطورو مزيجا بخبرة 10+، 20+ سنام</li>
+                <li><strong>متخصصو التمويل:</strong> تجارب ريادية من العالم المالي والبشريت</li>
+                <li><strong>باوثائوا قانونيون:</strong> خبرة عامة الأسفل أل عالمية</li>
+            </ul>
+        </section>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>رمز ROUM</h4>
+                <p>بناء البنية التحتية المالية الموثوقة مع الشفافية والامتثال الكامل.</p>
+                <div class="social-links">
+                    <a href="#" title="GitHub">💻</a>
+                    <a href="#" title="Telegram">✈️</a>
+                    <a href="#" title="Discord">💬</a>
+                    <a href="#" title="Twitter">𝕏</a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h4>التنقل</h4>
+                <a href="https://osama-qonaibe.github.io/roum-token-website/index-ar.html">الرئيسية</a>
+                <a href="https://osama-qonaibe.github.io/roum-token-website/about-ar.html">عن الموقع</a>
+                <a href="https://osama-qonaibe.github.io/roum-token-website/compliance-ar.html">الامتثال</a>
+                <a href="https://osama-qonaibe.github.io/roum-token-website/legal-ar.html">القانونية</a>
+                <a href="#contact">التواصل</a>
+            </div>
+
+            <div class="footer-section">
+                <h4>القانونية</h4>
+                <a href="https://osama-qonaibe.github.io/roum-token-website/legal-ar.html#terms-of-service">شروط الخدمة</a>
+                <a href="https://osama-qonaibe.github.io/roum-token-website/legal-ar.html#privacy-policy">سياسة الخصوصية</a>
+                <a href="https://osama-qonaibe.github.io/roum-token-website/legal-ar.html#disclaimer">إخلاء مسؤولية</a>
+                <a href="https://osama-qonaibe.github.io/roum-token-website/legal-ar.html#cookies-policy">سياسة ملفات تعريف الارتباط</a>
+            </div>
+
+            <div class="footer-section">
+                <h4>الموارد</h4>
+                <a href="https://osama-qonaibe.github.io/roum-token-website/compliance-ar.html">معايير الامتثال</a>
+                <a href="https://osama-qonaibe.github.io/roum-token-website/legal-ar.html#contact-legal">التواصل القانوني</a>
+                <a href="https://osama-qonaibe.github.io/roum-token-website/about-ar.html">عن المطور</a>
+                <a href="#contact">الدعم</a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 رمز ROUM. جميع الحقوق محفوظة.</p>
+            <p>بيناتس الذكي | منصة DeFi احترافية</p>
+            <p style="font-size: 0.85rem; margin-top: 1rem;">
+                "بناء البنية التحتية المالية للغد مع الشفافية والامتثال الكامل."
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        function switchLanguage(lang) {
+            if (lang === 'ar') {
+                window.location.href = 'https://osama-qonaibe.github.io/roum-token-website/about-ar.html';
+            } else if (lang === 'en') {
+                window.location.href = 'https://osama-qonaibe.github.io/roum-token-website/about.html';
+            }
+        }
+    </script>
+</body>
+</html>
