@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="About ROUM Token - Learn about the developer, vision, and mission behind Rumeida Heritage cryptocurrency">
+    <meta name="keywords" content="ROUM Token, Developer, Osama Qonaibe, Blockchain Developer, Cryptocurrency">
+    <title>About Us | ROUM Token</title>
+    
+    <style>
+        :root {
+            --color-primary: #D4AF37;
+            --color-primary-light: #E6C060;
+            --color-primary-dark: #B8860B;
+            --color-bg-dark: #5E5240;
+            --color-bg-light: #C9A961;
+            --color-bg-cream: #FFF8F0;
+            --color-bg-chocolate: #6B5A4A;
+            --color-text-primary: #5E5240;
+            --color-text-light: #FFF8F0;
+            --color-text-white: #FFFFFF;
+            --color-accent-teal: #32B8C6;
+            --color-border: #D4AF37;
+            --color-shadow: rgba(94, 82, 64, 0.15);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--color-text-primary);
+            background-color: var(--color-bg-cream);
+        }
+
+        /* HEADER */
+        header {
+            background: linear-gradient(135deg, var(--color-bg-dark) 0%, var(--color-bg-chocolate) 100%);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px var(--color-shadow);
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            text-decoration: none;
+            color: var(--color-text-light);
+        }
+
+        .logo-image {
+            width: 50px;
+            height: 50px;
+            background: var(--color-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.5rem;
+            color: var(--color-bg-dark);
+        }
+
+        .logo-text h1 {
+            font-size: 1.5rem;
+            margin: 0;
+            color: var(--color-primary);
+            letter-spacing: 2px;
+        }
+
+        nav a {
+            color: var(--color-text-light);
+            text-decoration: none;
+            margin: 0 1.5rem;
+            padding: 0.5rem 0;
+            border-bottom: 2px solid transparent;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        nav a:hover,
+        nav a.active {
+            color: var(--color-primary);
+            border-bottom-color: var(--color-primary);
+        }
+
+        /* PAGE HEADER */
+        .page-header {
+            background: linear-gradient(135deg, var(--color-bg-light) 0%, #8B7355 50%, var(--color-bg-dark) 100%);
+            color: var(--color-text-light);
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .page-header h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .page-header p {
+            font-size: 1.1rem;
+            opacity: 0.95;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* CONTENT */
+        .content {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        /* PROFILE SECTION */
+        .profile-section {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 3rem;
+            align-items: center;
+            margin-bottom: 4rem;
+            background: var(--color-bg-cream);
+            padding: 3rem;
+            border-radius: 12px;
+            border: 2px solid var(--color-border);
+            box-shadow: 0 10px 30px var(--color-shadow);
+        }
+
+        .profile-image {
+            text-align: center;
+        }
+
+        .profile-avatar {
+            width: 250px;
+            height: 250px;
+            background: linear-gradient(135deg, var(--color-bg-light) 0%, var(--color-bg-dark) 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 5rem;
+            margin: 0 auto;
+            box-shadow: 0 10px 30px var(--color-shadow);
+        }
+
+        .profile-name {
+            text-align: center;
+            margin-top: 1.5rem;
+        }
+
+        .profile-name h2 {
+            color: var(--color-primary);
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .profile-name p {
+            color: var(--color-text-primary);
+            font-weight: 500;
+        }
+
+        .profile-info h3 {
+            color: var(--color-primary);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .profile-info p {
+            color: var(--color-text-primary);
+            font-size: 1rem;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .section {
+            margin-bottom: 4rem;
+        }
+
+        .section h2 {
+            color: var(--color-primary);
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid var(--color-border);
+        }
+
+        .section h3 {
+            color: var(--color-bg-dark);
+            font-size: 1.3rem;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .section p {
+            color: var(--color-text-primary);
+            font-size: 1rem;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .skill-card {
+            background: var(--color-bg-cream);
+            border-left: 4px solid var(--color-primary);
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px var(--color-shadow);
+        }
+
+        .skill-card strong {
+            color: var(--color-primary);
+            display: block;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .skill-card p {
+            margin: 0;
+            font-size: 0.95rem;
+            color: var(--color-text-primary);
+        }
+
+        .timeline {
+            position: relative;
+            padding: 2rem 0;
+        }
+
+        .timeline-item {
+            padding-left: 3rem;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 20px;
+            height: 20px;
+            background: var(--color-primary);
+            border-radius: 50%;
+            border: 3px solid var(--color-bg-cream);
+            box-shadow: 0 0 0 2px var(--color-primary);
+        }
+
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            left: 9px;
+            top: 20px;
+            width: 2px;
+            height: calc(100% + 2rem);
+            background: var(--color-primary);
+        }
+
+        .timeline-item:last-child::after {
+            display: none;
+        }
+
+        .timeline-year {
+            color: var(--color-primary);
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .timeline-title {
+            color: var(--color-bg-dark);
+            font-weight: 600;
+            font-size: 1.05rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-description {
+            color: var(--color-text-primary);
+            font-size: 0.95rem;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.1) 0%, rgba(212, 175, 55, 0.05) 100%);
+            border: 2px solid var(--color-primary);
+            padding: 2rem;
+            border-radius: 12px;
+            margin: 2rem 0;
+        }
+
+        .highlight-box h3 {
+            color: var(--color-primary);
+            margin-top: 0;
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .value-card {
+            background: var(--color-bg-cream);
+            border: 2px solid var(--color-border);
+            padding: 2rem;
+            text-align: center;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+        }
+
+        .value-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px var(--color-shadow);
+        }
+
+        .value-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .value-card h4 {
+            color: var(--color-primary);
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        .value-card p {
+            margin: 0;
+            font-size: 0.95rem;
+        }
+
+        .contact-section {
+            background: linear-gradient(135deg, var(--color-bg-dark) 0%, var(--color-bg-chocolate) 100%);
+            color: var(--color-text-light);
+            padding: 3rem;
+            border-radius: 12px;
+            text-align: center;
+            margin: 3rem 0;
+        }
+
+        .contact-section h3 {
+            color: var(--color-primary);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .contact-section p {
+            margin-bottom: 1.5rem;
+            font-size: 1.05rem;
+        }
+
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .contact-link {
+            background: var(--color-primary);
+            color: var(--color-bg-dark);
+            padding: 0.75rem 1.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .contact-link:hover {
+            background: var(--color-primary-light);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
+        }
+
+        /* FOOTER */
+        footer {
+            background: linear-gradient(180deg, var(--color-bg-dark) 0%, #3a3230 100%);
+            color: var(--color-text-light);
+            padding: 3rem 2rem;
+            margin-top: 4rem;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h4 {
+            color: var(--color-primary);
+            margin-bottom: 1rem;
+        }
+
+        .footer-section a {
+            color: var(--color-text-light);
+            text-decoration: none;
+            display: block;
+            margin-bottom: 0.5rem;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            color: var(--color-primary);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(212, 175, 55, 0.2);
+            padding-top: 2rem;
+            text-align: center;
+            color: var(--color-text-light);
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            nav {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 0.5rem;
+            }
+
+            nav a {
+                margin: 0 0.5rem;
+                font-size: 0.9rem;
+            }
+
+            .profile-section {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .profile-avatar {
+                width: 200px;
+                height: 200px;
+            }
+
+            .page-header h1 {
+                font-size: 2rem;
+            }
+
+            .section h2 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <div class="header-container">
+            <a href="/" class="logo">
+                <div class="logo-image">R</div>
+                <div class="logo-text">
+                    <h1>ROUM</h1>
+                    <p>HERITAGE</p>
+                </div>
+            </a>
+            <nav>
+                <a href="/">Home</a>
+                <a href="/about.html" class="active">About</a>
+                <a href="/compliance.html">Compliance</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- PAGE HEADER -->
+    <section class="page-header">
+        <h1>About Us</h1>
+        <p>Meet the developer and visionary behind ROUM Token - Building tomorrow's financial infrastructure</p>
+    </section>
+
+    <!-- CONTENT -->
+    <div class="content">
+        <!-- DEVELOPER PROFILE -->
+        <div class="profile-section">
+            <div class="profile-image">
+                <div class="profile-avatar">👨‍💻</div>
+                <div class="profile-name">
+                    <h2>Osama Qonaibe</h2>
+                    <p>Full-Stack Blockchain Developer</p>
+                </div>
+            </div>
+
+            <div class="profile-info">
+                <h3>About Me</h3>
+                <p>I'm a passionate full-stack blockchain developer with expertise in smart contract development, DeFi architecture, and cryptocurrency tokenomics. With a background in both traditional software development and cutting-edge blockchain technology, I'm dedicated to building transparent, secure, and compliant financial infrastructure for the future.</p>
+                <p>ROUM Token represents my vision for creating a heritage-focused cryptocurrency platform that combines the power of blockchain technology with professional regulatory compliance and community-driven development.</p>
+            </div>
+        </div>
+
+        <!-- VISION & MISSION -->
+        <div class="section">
+            <h2>Vision & Mission</h2>
+            
+            <div class="highlight-box">
+                <h3>🎯 Our Vision</h3>
+                <p>To establish ROUM Token as a leading, professionally-managed cryptocurrency platform that bridges traditional financial infrastructure with innovative blockchain technology, while maintaining the highest standards of transparency, security, and regulatory compliance.</p>
+            </div>
+
+            <div class="highlight-box">
+                <h3>🚀 Our Mission</h3>
+                <p>To develop and maintain a secure, transparent, and compliant cryptocurrency ecosystem that empowers users, respects regulatory requirements, and builds lasting trust through professional operations and community engagement. We are committed to providing financial solutions that honor both heritage and innovation.</p>
+            </div>
+        </div>
+
+        <!-- CORE VALUES -->
+        <div class="section">
+            <h2>Core Values</h2>
+            
+            <div class="values-grid">
+                <div class="value-card">
+                    <div class="value-icon">🔒</div>
+                    <h4>Security First</h4>
+                    <p>Every decision prioritizes user security and asset protection through industry-leading standards and continuous monitoring.</p>
+                </div>
+
+                <div class="value-card">
+                    <div class="value-icon">⚖️</div>
+                    <h4>Compliance</h4>
+                    <p>100% commitment to regulatory standards, international laws, and professional governance across all operations.</p>
+                </div>
+
+                <div class="value-card">
+                    <div class="value-icon">🤝</div>
+                    <h4>Community</h4>
+                    <p>Building with and for our community through transparent communication, active engagement, and shared success.</p>
+                </div>
+
+                <div class="value-card">
+                    <div class="value-icon">💡</div>
+                    <h4>Innovation</h4>
+                    <p>Continuously advancing technology and processes while maintaining stability and professional standards.</p>
+                </div>
+
+                <div class="value-card">
+                    <div class="value-icon">🌍</div>
+                    <h4>Inclusivity</h4>
+                    <p>Making blockchain accessible to everyone while respecting diverse cultures, traditions, and heritages.</p>
+                </div>
+
+                <div class="value-card">
+                    <div class="value-icon">✨</div>
+                    <h4>Excellence</h4>
+                    <p>Pursuing excellence in every aspect of our platform, from code quality to customer service to documentation.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- EXPERTISE -->
+        <div class="section">
+            <h2>Technical Expertise</h2>
+            
+            <p>I bring comprehensive expertise across the blockchain and cryptocurrency ecosystem:</p>
+            
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <strong>Smart Contracts</strong>
+                    <p>Solidity development, contract auditing, security optimization, and gas efficiency on Binance Smart Chain and EVM-compatible networks.</p>
+                </div>
+
+                <div class="skill-card">
+                    <strong>DeFi Architecture</strong>
+                    <p>Tokenomics design, liquidity protocols, yield farming mechanisms, and sustainable ecosystem development.</p>
+                </div>
+
+                <div class="skill-card">
+                    <strong>Frontend Development</strong>
+                    <p>React, Vue.js, Web3.js integration, wallet connectivity, and professional UI/UX design for blockchain applications.</p>
+                </div>
+
+                <div class="skill-card">
+                    <strong>Backend Systems</strong>
+                    <p>Node.js, Python, database design, API development, and scalable infrastructure for blockchain platforms.</p>
+                </div>
+
+                <div class="skill-card">
+                    <strong>Security & Auditing</strong>
+                    <p>Smart contract security analysis, vulnerability assessment, best practices implementation, and compliance verification.</p>
+                </div>
+
+                <div class="skill-card">
+                    <strong>Regulatory Compliance</strong>
+                    <p>GDPR, AML/KYC implementation, OFAC compliance, and international regulatory framework integration.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ROUM TOKEN JOURNEY -->
+        <div class="section">
+            <h2>ROUM Token Journey</h2>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-year">2025 - Q1</div>
+                    <div class="timeline-title">Concept & Design Phase</div>
+                    <div class="timeline-description">Comprehensive planning, tokenomics design, whitepaper development, and regulatory framework establishment for ROUM Token.</div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-year">2025 - Q2</div>
+                    <div class="timeline-title">Development & Testing</div>
+                    <div class="timeline-description">Smart contract development, extensive testing, security auditing, and platform infrastructure development.</div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-year">2025 - Q3</div>
+                    <div class="timeline-title">Launch & Growth</div>
+                    <div class="timeline-description">Official token launch on Binance Smart Chain, initial distribution, community building, and market establishment.</div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-year">2025 - Q4</div>
+                    <div class="timeline-title">Expansion & Partnerships</div>
+                    <div class="timeline-description">Strategic partnerships, exchange listings, ecosystem expansion, and community engagement initiatives.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ACHIEVEMENTS -->
+        <div class="section">
+            <h2>Key Achievements</h2>
+            
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <strong>Professional Audits</strong>
+                    <p>Multiple security audits completed with professional cryptocurrency security firms to ensure contract integrity.</p>
+                </div>
+
+                <div class="skill-card">
+                    <strong>Compliance Framework</strong>
+                    <p>Comprehensive compliance documentation covering GDPR, AML/KYC, OFAC, and international regulatory standards.</p>
+                </div>
+
+                <div class="skill-card">
+                    <strong>Binance Integration</strong>
+                    <p>Full deployment on Binance Smart Chain with complete compliance to BSC standards and best practices.</p>
+                </div>
+
+                <div class="skill-card">
+                    <strong>Professional Website</strong>
+                    <p>Production-ready website with responsive design, complete documentation, and professional branding throughout.</p>
+                </div>
+
+                <div class="skill-card">
+                    <strong>Community Building</strong>
+                    <p>Active engagement in blockchain communities and fostering transparent communication with all stakeholders.</p>
+                </div>
+
+                <div class="skill-card">
+                    <strong>Open Source Commitment</strong>
+                    <p>GitHub repository with clean code, comprehensive documentation, and transparent development processes.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- VISION FOR FUTURE -->
+        <div class="section">
+            <h2>Future Vision</h2>
+            
+            <h3>Short-term Goals (6-12 months)</h3>
+            <ul style="list-style-position: inside; color: var(--color-text-primary); line-height: 2;">
+                <li>✅ Establish community of engaged users and developers</li>
+                <li>✅ Secure exchange listings on major cryptocurrency platforms</li>
+                <li>✅ Launch DeFi features and liquidity pools</li>
+                <li>✅ Expand to multiple blockchain networks</li>
+            </ul>
+
+            <h3>Long-term Vision (1-3 years)</h3>
+            <ul style="list-style-position: inside; color: var(--color-text-primary); line-height: 2;">
+                <li>✅ Establish ROUM as a leading heritage-focused cryptocurrency</li>
+                <li>✅ Build comprehensive financial services ecosystem</li>
+                <li>✅ Achieve regulatory recognition in multiple jurisdictions</li>
+                <li>✅ Create meaningful partnerships with traditional finance</li>
+            </ul>
+        </div>
+
+        <!-- CONTACT SECTION -->
+        <div class="contact-section">
+            <h3>Get in Touch</h3>
+            <p>Have questions, opportunities, or just want to connect? Let's talk about the future of ROUM Token and blockchain innovation.</p>
+            
+            <div class="contact-links">
+                <a href="mailto:osama@roumtoken.com" class="contact-link">📧 Email</a>
+                <a href="https://github.com/Osama-Qonaibe" class="contact-link" target="_blank">💻 GitHub</a>
+                <a href="#" class="contact-link">💬 Discord</a>
+                <a href="#" class="contact-link">🐦 Twitter</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>ROUM Token</h4>
+                <p>Building tomorrow's financial infrastructure with transparency and compliance.</p>
+            </div>
+
+            <div class="footer-section">
+                <h4>Navigation</h4>
+                <a href="/">Home</a>
+                <a href="/about.html">About Us</a>
+                <a href="/compliance.html">Compliance</a>
+                <a href="#contact">Contact</a>
+            </div>
+
+            <div class="footer-section">
+                <h4>Legal</h4>
+                <a href="#">Terms of Service</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Disclaimer</a>
+                <a href="#">Cookie Policy</a>
+            </div>
+
+            <div class="footer-section">
+                <h4>Resources</h4>
+                <a href="#">Documentation</a>
+                <a href="#">API Reference</a>
+                <a href="#">FAQ</a>
+                <a href="#">Support</a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 ROUM Token. All rights reserved.</p>
+            <p>Developed by Osama Qonaibe | Full-Stack Blockchain Developer</p>
+        </div>
+    </footer>
+</body>
+</html>
