@@ -1,0 +1,204 @@
+{
+  "en": {
+    "nav": {
+      "home": "Home",
+      "about": "About",
+      "compliance": "Compliance",
+      "legal": "Legal",
+      "contact": "Contact"
+    },
+    "language": {
+      "english": "English",
+      "arabic": "العربية"
+    },
+    "hero": {
+      "title": "ROUM Token",
+      "subtitle": "Rumeida Heritage - Building Tomorrow's Financial Infrastructure",
+      "badge_audited": "Audited",
+      "badge_verified": "Verified",
+      "badge_secure": "Secure",
+      "cta_primary": "Get Started",
+      "cta_secondary": "Learn More"
+    },
+    "features": {
+      "section_title": "Why Choose ROUM Token",
+      "security": {
+        "title": "Security First",
+        "description": "Industry-leading security standards with professional audits and continuous monitoring"
+      },
+      "compliance": {
+        "title": "Compliance",
+        "description": "100% Binance Smart Chain compliant with GDPR, AML/KYC, and OFAC standards"
+      },
+      "fast": {
+        "title": "Fast & Efficient",
+        "description": "Lightning-fast transactions on Binance Smart Chain with minimal fees"
+      },
+      "global": {
+        "title": "Global Access",
+        "description": "Available to users worldwide with transparent and professional operations"
+      },
+      "transparent": {
+        "title": "Transparent",
+        "description": "Complete transparency in tokenomics, governance, and financial reporting"
+      },
+      "community": {
+        "title": "Community Driven",
+        "description": "Built for the community with active engagement and regular updates"
+      }
+    },
+    "compliance_section": {
+      "title": "🏦 Professional Compliance Standards",
+      "description": "ROUM Token maintains the highest standards of regulatory compliance across all markets and jurisdictions. We are committed to 100% Binance Smart Chain compliance with zero exceptions.",
+      "gdpr": {
+        "label": "GDPR",
+        "description": "EU Data Protection"
+      },
+      "aml_kyc": {
+        "label": "AML/KYC",
+        "description": "Anti-Money Laundering"
+      },
+      "ofac": {
+        "label": "OFAC",
+        "description": "US Sanctions Compliance"
+      },
+      "fincen": {
+        "label": "FinCEN",
+        "description": "Financial Intelligence"
+      }
+    },
+    "stats": {
+      "section_title": "ROUM Token Overview",
+      "compliance_value": "100%",
+      "compliance_label": "Binance Compliant",
+      "audit_label": "Professionally Audited",
+      "security_label": "Security Verified",
+      "support_value": "24/7",
+      "support_label": "Active Support"
+    },
+    "footer": {
+      "about_title": "ROUM Token",
+      "about_desc": "Building tomorrow's financial infrastructure with transparency and compliance.",
+      "nav_title": "Navigation",
+      "nav_home": "Home",
+      "nav_about": "About Us",
+      "nav_compliance": "Compliance",
+      "nav_legal": "Legal",
+      "nav_contact": "Contact",
+      "legal_title": "Legal",
+      "legal_terms": "Terms of Service",
+      "legal_privacy": "Privacy Policy",
+      "legal_disclaimer": "Disclaimer",
+      "legal_cookies": "Cookie Policy",
+      "resources_title": "Resources",
+      "resources_standards": "Compliance Standards",
+      "resources_legal_contact": "Contact Legal",
+      "resources_developer": "About Developer",
+      "resources_support": "Support",
+      "copyright": "© 2025 ROUM Token. All rights reserved.",
+      "tagline": "Binance Smart Chain | Professional DeFi Platform",
+      "mission": "Building tomorrow's financial infrastructure with transparency and compliance."
+    }
+  },
+  "ar": {
+    "nav": {
+      "home": "الرئيسية",
+      "about": "عننا",
+      "compliance": "الامتثال",
+      "legal": "القانونية",
+      "contact": "التواصل"
+    },
+    "language": {
+      "english": "English",
+      "arabic": "العربية"
+    },
+    "hero": {
+      "title": "رمز ROUM",
+      "subtitle": "إرث رميدة - بناء البنية التحتية المالية للغد",
+      "badge_audited": "معتمد",
+      "badge_verified": "موثوق",
+      "badge_secure": "آمن",
+      "cta_primary": "ابدأ الآن",
+      "cta_secondary": "تعرف على المزيد"
+    },
+    "features": {
+      "section_title": "لماذا اختيار رمز ROUM",
+      "security": {
+        "title": "الأمان أولاً",
+        "description": "معايير أمان من الطراز الأول مع عمليات تدقيق احترافية والمراقبة المستمرة"
+      },
+      "compliance": {
+        "title": "الامتثال الكامل",
+        "description": "100% متوافق مع معايير بيناتس الذكي مع GDPR وAML/KYC وOFAC"
+      },
+      "fast": {
+        "title": "سريع وفعال",
+        "description": "معاملات فائقة السرعة على بيناتس الذكي برسوم منخفضة جداً"
+      },
+      "global": {
+        "title": "وصول عالمي",
+        "description": "متاح للمستخدمين في جميع أنحاء العالم مع عمليات شفافة واحترافية"
+      },
+      "transparent": {
+        "title": "شفاف تماماً",
+        "description": "شفافية كاملة في توزيع الرموز والحكم والإفصاح المالي"
+      },
+      "community": {
+        "title": "مدفوع بالمجتمع",
+        "description": "مبني للمجتمع مع مشاركة نشطة وتحديثات منتظمة"
+      }
+    },
+    "compliance_section": {
+      "title": "🏦 معايير الامتثال المهنية",
+      "description": "يحافظ رمز ROUM على أعلى معايير الامتثال التنظيمي في جميع الأسواق والولايات القضائية. نحن ملتزمون بنسبة 100% من امتثال بيناتس الذكي بدون استثناءات.",
+      "gdpr": {
+        "label": "GDPR",
+        "description": "حماية البيانات الأوروبية"
+      },
+      "aml_kyc": {
+        "label": "AML/KYC",
+        "description": "مكافحة غسيل الأموال"
+      },
+      "ofac": {
+        "label": "OFAC",
+        "description": "امتثال العقوبات الأمريكية"
+      },
+      "fincen": {
+        "label": "FinCEN",
+        "description": "الذكاء المالي"
+      }
+    },
+    "stats": {
+      "section_title": "نظرة عامة على رمز ROUM",
+      "compliance_value": "100%",
+      "compliance_label": "متوافق مع بيناتس",
+      "audit_label": "معتمد احترافياً",
+      "security_label": "أمان موثوق",
+      "support_value": "24/7",
+      "support_label": "دعم نشط"
+    },
+    "footer": {
+      "about_title": "رمز ROUM",
+      "about_desc": "بناء البنية التحتية المالية للغد مع الشفافية والامتثال الكامل.",
+      "nav_title": "التنقل",
+      "nav_home": "الرئيسية",
+      "nav_about": "عن الموقع",
+      "nav_compliance": "الامتثال",
+      "nav_legal": "القانونية",
+      "nav_contact": "التواصل",
+      "legal_title": "القانونية",
+      "legal_terms": "شروط الخدمة",
+      "legal_privacy": "سياسة الخصوصية",
+      "legal_disclaimer": "إخلاء المسؤولية",
+      "legal_cookies": "سياسة ملفات تعريف الارتباط",
+      "resources_title": "الموارد",
+      "resources_standards": "معايير الامتثال",
+      "resources_legal_contact": "التواصل القانوني",
+      "resources_developer": "عن المطور",
+      "resources_support": "الدعم",
+      "copyright": "© 2025 رمز ROUM. جميع الحقوق محفوظة.",
+      "tagline": "بيناتس الذكي | منصة DeFi احترافية",
+      "mission": "بناء البنية التحتية المالية للغد مع الشفافية والامتثال الكامل."
+    }
+  }
+}
