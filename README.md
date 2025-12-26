@@ -11,12 +11,13 @@
 
 ## 📋 Overview
 
-This repository contains the official website for **ROUM Token (Rumeida Heritage)**, a professionally-managed cryptocurrency platform on Binance Smart Chain. The website is built with modern web standards, responsive design, and professional compliance documentation.
+This repository contains the official website for **ROUM Token (Rumeida Heritage)**, a professionally-managed cryptocurrency platform on Binance Smart Chain. The website is built with modern web standards, responsive design, and comprehensive legal documentation.
 
 ### ✨ Key Features
 
 - ✅ **Fully Responsive Design** - Works perfectly on all devices
 - ✅ **Professional Branding** - Premium gold/brown luxury color scheme
+- ✅ **Comprehensive Legal Section** - 8 complete legal documents
 - ✅ **Compliance Framework** - GDPR, AML/KYC, OFAC, FinCEN compliant
 - ✅ **SEO Optimized** - Structured data, meta tags, sitemap
 - ✅ **Security First** - Industry-leading security standards
@@ -32,6 +33,7 @@ roum-token-website/
 ├── index.html                 # Homepage with features and CTA
 ├── about.html                 # Developer profile and vision
 ├── compliance.html            # Compliance standards and frameworks
+├── legal.html                 # Comprehensive legal documentation
 ├── 404.html                   # Error page
 ├── config.json                # Site configuration
 ├── sitemap.xml                # XML sitemap for SEO
@@ -110,7 +112,64 @@ roum-token-website/
 - Reporting & Transparency
 - Contact Information
 
-### 4. 404 Error Page (`404.html`)
+### 4. Legal (`legal.html`) - ⭐ NEW
+Comprehensive legal documentation with 8 complete sections:
+
+#### 📋 **Terms of Service**
+- Agreement to terms
+- Use license restrictions
+- Disclaimers
+- Limitations of liability
+- Material accuracy
+- Third-party links
+
+#### 🔐 **Privacy Policy**
+- Information collection
+- Data protection measures
+- User rights (GDPR compliant)
+- Third-party data sharing
+- Data retention policies
+
+#### ⚠️ **Disclaimer**
+- No financial advice
+- Volatility and risk acknowledgment
+- Regulatory change disclaimers
+- No warranty statements
+- Liability limitations
+- Technical issues
+
+#### ✅ **Acceptable Use Policy**
+- Prohibited activities
+- AML/KYC compliance requirements
+- Sanctions screening (OFAC)
+- Account suspension criteria
+
+#### ©️ **Intellectual Property Rights**
+- Content ownership
+- License grants
+- Usage restrictions
+- Trademark usage
+- User-generated content
+
+#### ⚖️ **Limitation of Liability**
+- Maximum liability cap ($100)
+- Excluded damages (profits, data loss, etc.)
+- No guarantees
+- User responsibility
+
+#### 🍪 **Cookies Policy**
+- Cookie types explained
+- Third-party cookies
+- Cookie management instructions
+- Local storage usage
+
+#### 📞 **Contact Legal Team**
+- Legal inquiries: legal@roumtoken.com
+- Compliance issues: compliance@roumtoken.com
+- Privacy requests: privacy@roumtoken.com
+- General contact: info@roumtoken.com
+
+### 5. 404 Error Page (`404.html`)
 - Helpful error message
 - Suggestions for next steps
 - Navigation links
@@ -196,6 +255,7 @@ Update `config.json` to modify:
 - Contact information
 - Social media links
 - Blockchain settings
+- Legal documents configuration
 - Feature flags
 
 ### Update Navigation Links
@@ -206,6 +266,7 @@ Edit the `<nav>` section in header to add/remove pages:
   <a href="/">Home</a>
   <a href="/about.html">About</a>
   <a href="/compliance.html">Compliance</a>
+  <a href="/legal.html">Legal</a>
   <a href="#contact">Contact</a>
 </nav>
 ```
@@ -233,13 +294,14 @@ Edit the `<nav>` section in header to add/remove pages:
 
 ---
 
-## 🔐 Security
+## 🔒 Security
 
 - **HTTPS Required** - Always use SSL/TLS
 - **No sensitive data** - No personal information stored
 - **Input validation** - All forms validated
 - **Security headers** - CSP, X-Frame-Options configured
 - **Regular updates** - Keep dependencies updated
+- **Legal protections** - Comprehensive terms and disclaimers
 
 ---
 
@@ -247,7 +309,7 @@ Edit the `<nav>` section in header to add/remove pages:
 
 - **Meta tags** - Proper title, description, keywords
 - **Structured data** - Schema.org markup included
-- **Sitemap** - XML sitemap for search engines
+- **Sitemap** - XML sitemap for search engines (includes Legal page)
 - **Robots.txt** - Search engine directives
 - **Open Graph** - Social media sharing optimized
 - **Mobile-friendly** - Responsive design
@@ -283,6 +345,11 @@ Edit the `<nav>` section in header to add/remove pages:
 2. Check file path in href
 3. Ensure proper file extensions
 
+### Legal page not loading
+1. Check file: legal.html exists
+2. Verify navigation links point to /legal.html
+3. Check browser console for errors
+
 ---
 
 ## 📝 License
@@ -317,13 +384,20 @@ Contributions are welcome! Please:
 ## 💬 Support & Contact
 
 - **Email**: osama@roumtoken.com
+- **Legal Inquiries**: legal@roumtoken.com
+- **Compliance**: compliance@roumtoken.com
+- **Privacy Requests**: privacy@roumtoken.com
 - **GitHub Issues**: [Report a bug](https://github.com/Osama-Qonaibe/roum-token-website/issues)
 - **Website**: https://roumtoken.com
 
 ---
 
-## 📌 Roadmap
+## 🗺️ Roadmap
 
+- [x] Homepage with features
+- [x] About Us page with developer profile
+- [x] Compliance Standards page
+- [x] **Legal Documentation page (NEW)**
 - [ ] Add multi-language support (Arabic, English, more)
 - [ ] Implement blog section
 - [ ] Add contact form with email integration
@@ -335,18 +409,19 @@ Contributions are welcome! Please:
 
 ---
 
-## 🎉 Acknowledgments
+## 🙏 Acknowledgments
 
 - Binance Smart Chain community
 - Cryptocurrency security experts
 - Web accessibility standards (WCAG)
+- Legal compliance frameworks
 - Open source community
 
 ---
 
-## 📄 Compliance Statement
+## ⚖️ Legal Compliance
 
-**ROUM Token** is committed to 100% compliance with:
+**ROUM Token** maintains comprehensive compliance with:
 - Binance Smart Chain standards
 - GDPR regulations
 - AML/KYC requirements
@@ -354,11 +429,17 @@ Contributions are welcome! Please:
 - FinCEN guidelines
 - International blockchain standards
 
-See [COMPLIANCE_STANDARDS.md](docs/COMPLIANCE_STANDARDS.md) for full details.
+See [legal.html](/legal.html) for complete legal documentation.
 
 ---
 
-## 🔄 Version History
+## 📜 Version History
+
+### v1.0.1 - December 26, 2025
+- ✅ Added comprehensive Legal page (8 sections)
+- ✅ Updated sitemap with Legal page
+- ✅ Updated config.json with legal documents
+- ✅ Enhanced legal compliance documentation
 
 ### v1.0.0 - December 26, 2025
 - ✅ Initial release
@@ -374,7 +455,8 @@ See [COMPLIANCE_STANDARDS.md](docs/COMPLIANCE_STANDARDS.md) for full details.
 ---
 
 **Last Updated**: December 26, 2025  
-**Status**: ✅ Production Ready
+**Status**: ✅ Production Ready  
+**Version**: 1.0.1 - Complete with Legal Documentation
 
 ---
 
