@@ -1,0 +1,113 @@
+{
+  "site": {
+    "name": "ROUM Token",
+    "subtitle": "Rumeida Heritage",
+    "description": "Building tomorrow's financial infrastructure with transparency and compliance",
+    "url": "https://roumtoken.com",
+    "version": "1.0.0",
+    "lastUpdated": "2025-12-26"
+  },
+  "owner": {
+    "name": "Osama Qonaibe",
+    "email": "osama@roumtoken.com",
+    "github": "https://github.com/Osama-Qonaibe",
+    "role": "Full-Stack Blockchain Developer"
+  },
+  "branding": {
+    "colors": {
+      "primary": "#D4AF37",
+      "primaryLight": "#E6C060",
+      "primaryDark": "#B8860B",
+      "bgDark": "#5E5240",
+      "bgLight": "#C9A961",
+      "bgCream": "#FFF8F0",
+      "bgChocolate": "#6B5A4A",
+      "textPrimary": "#5E5240",
+      "textLight": "#FFF8F0",
+      "textWhite": "#FFFFFF",
+      "accentTeal": "#32B8C6"
+    },
+    "fonts": {
+      "primary": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
+      "mono": "'Courier New', monospace"
+    }
+  },
+  "pages": [
+    {
+      "name": "Home",
+      "path": "/",
+      "file": "index.html",
+      "priority": 1.0,
+      "changefreq": "weekly"
+    },
+    {
+      "name": "About Us",
+      "path": "/about.html",
+      "file": "about.html",
+      "priority": 0.9,
+      "changefreq": "monthly"
+    },
+    {
+      "name": "Compliance",
+      "path": "/compliance.html",
+      "file": "compliance.html",
+      "priority": 0.9,
+      "changefreq": "monthly"
+    },
+    {
+      "name": "404 Error",
+      "path": "/404.html",
+      "file": "404.html",
+      "priority": 0.1,
+      "changefreq": "yearly"
+    }
+  ],
+  "blockchain": {
+    "chain": "Binance Smart Chain (BSC)",
+    "chainId": 56,
+    "tokenName": "ROUM Token",
+    "tokenSymbol": "ROUM",
+    "decimals": 18,
+    "contractStandard": "BEP-20"
+  },
+  "compliance": {
+    "frameworks": [
+      "GDPR",
+      "AML/KYC",
+      "OFAC",
+      "FinCEN",
+      "SOX",
+      "Local Regulations",
+      "International Standards"
+    ],
+    "audited": true,
+    "verified": true,
+    "secure": true
+  },
+  "social": {
+    "github": "https://github.com/Osama-Qonaibe/roum-token-website",
+    "twitter": "#",
+    "discord": "#",
+    "telegram": "#"
+  },
+  "seo": {
+    "keywords": ["ROUM Token", "Rumeida Heritage", "Cryptocurrency", "Binance Smart Chain", "DeFi", "Blockchain"],
+    "author": "Osama Qonaibe",
+    "lang": "en",
+    "charset": "UTF-8",
+    "viewport": "width=device-width, initial-scale=1.0"
+  },
+  "features": {
+    "responsive": true,
+    "darkMode": false,
+    "animations": true,
+    "accessibility": true,
+    "security": true
+  },
+  "deployment": {
+    "platform": "GitHub Pages / Custom Server",
+    "status": "Production Ready",
+    "ssl": true,
+    "cdn": "Recommended"
+  }
+}
