@@ -1,0 +1,22 @@
+# Jekyll Configuration for GitHub Pages
+# This file tells GitHub Pages NOT to process the site with Jekyll
+
+# Exclude Jekyll from processing
+theme: null
+
+# List of files and folders not to process
+exclude:
+  - .git
+  - .gitignore
+  - .github
+  - node_modules
+  - vendor
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - LICENSE
+
+# Build settings
+lsi: false
+safe: true
+incremental: false
