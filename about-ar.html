@@ -3,11 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="عن رمز ROUM - تعرّف على المطور، الرؤية، والرسالة وراء عملة روميدا التراثية الرقمية">
-    <meta name="keywords" content="رمز ROUM، المطور، أسامة قنيبة، مطور سلسلة الكتل، العملات الرقمية">
-    <title>عن الموقع | رمز ROUM</title>
+    <meta name="description" content="عن رمز ROUM - تعرّف على المطور والرؤية والرسالة وراء عملة ROUM الرقمية الموروثة">
+    <meta name="keywords" content="رمز ROUM، المطور، أسامة قنيبة، مطور البلوكتشين، العملات الرقمية">
+    <title>عننا | رمز ROUM</title>
     
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+
         :root {
             --color-primary: #D4AF37;
             --color-primary-light: #E6C060;
@@ -22,6 +24,8 @@
             --color-accent-teal: #32B8C6;
             --color-border: #D4AF37;
             --color-shadow: rgba(94, 82, 64, 0.15);
+            --font-main: 'Cairo', sans-serif;
+            --font-mono: 'JetBrains Mono', monospace;
         }
 
         * {
@@ -30,11 +34,17 @@
             box-sizing: border-box;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-            line-height: 1.6;
+            font-family: var(--font-main);
+            line-height: 1.8;
             color: var(--color-text-primary);
             background-color: var(--color-bg-cream);
+            text-align: right;
+            direction: rtl;
         }
 
         /* HEADER */
@@ -76,6 +86,7 @@
             font-weight: bold;
             font-size: 1.5rem;
             color: var(--color-bg-dark);
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
         }
 
         .logo-text h1 {
@@ -83,6 +94,15 @@
             margin: 0;
             color: var(--color-primary);
             letter-spacing: 2px;
+            font-weight: 700;
+        }
+
+        .logo-text p {
+            font-size: 0.75rem;
+            margin: 0;
+            color: var(--color-text-light);
+            letter-spacing: 1px;
+            font-weight: 500;
         }
 
         .header-right {
@@ -103,6 +123,7 @@
             border-bottom: 2px solid transparent;
             transition: all 0.3s ease;
             font-weight: 500;
+            font-size: 0.95rem;
         }
 
         nav a:hover,
@@ -132,6 +153,7 @@
             font-weight: 600;
             transition: all 0.3s ease;
             font-size: 0.9rem;
+            font-family: var(--font-main);
         }
 
         .lang-switcher button.active {
@@ -153,17 +175,19 @@
         }
 
         .page-header h1 {
-            font-size: 3rem;
+            font-size: 2.5rem;
             margin-bottom: 1rem;
-            font-weight: 700;
+            font-weight: 800;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
             letter-spacing: 1px;
         }
 
         .page-header p {
             font-size: 1.1rem;
             opacity: 0.95;
-            max-width: 700px;
+            max-width: 600px;
             margin: 0 auto;
+            font-weight: 400;
         }
 
         /* CONTENT */
@@ -185,10 +209,16 @@
             border-radius: 12px;
             border: 2px solid var(--color-border);
             box-shadow: 0 10px 30px var(--color-shadow);
+            direction: rtl;
         }
 
         .profile-image {
             text-align: center;
+            order: 2;
+        }
+
+        .profile-info {
+            order: 1;
         }
 
         .profile-avatar {
@@ -246,6 +276,16 @@
             border-bottom: 2px solid var(--color-border);
         }
 
+        .section h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--color-primary), transparent);
+        }
+
         .section h3 {
             color: var(--color-bg-dark);
             font-size: 1.3rem;
@@ -260,20 +300,56 @@
             margin-bottom: 1rem;
         }
 
+        .section ul {
+            margin-right: 2rem;
+            margin-bottom: 1.5rem;
+            color: var(--color-text-primary);
+        }
+
+        .section li {
+            margin-bottom: 0.75rem;
+            font-size: 1rem;
+            line-height: 1.7;
+            font-weight: 400;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.1), rgba(201, 169, 97, 0.1));
+            border-right: 4px solid var(--color-primary);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .highlight-box h3 {
+            color: var(--color-primary);
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-top: 0;
+        }
+
+        .highlight-box p {
+            margin: 0;
+            font-weight: 400;
+        }
+
         .skills-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 1.5rem;
             margin: 2rem 0;
         }
 
         .skill-card {
             background: var(--color-bg-cream);
-            border-left: 4px solid var(--color-primary);
+            border: 2px solid var(--color-border);
+            border-right: 4px solid var(--color-primary);
             padding: 1.5rem;
             border-radius: 8px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
             transition: all 0.3s ease;
+            text-align: right;
         }
 
         .skill-card:hover {
@@ -296,109 +372,90 @@
 
         .timeline {
             position: relative;
-            padding: 2rem 0;
+            padding: 2rem 0 2rem 2rem;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 0;
+            height: 100%;
+            width: 3px;
+            background: linear-gradient(180deg, var(--color-primary), transparent);
         }
 
         .timeline-item {
-            padding-right: 3rem;
             margin-bottom: 2rem;
             position: relative;
+            padding-bottom: 1rem;
+            padding-right: 2rem;
         }
 
         .timeline-item::before {
             content: '';
             position: absolute;
-            right: 0;
+            right: -8px;
             top: 0;
-            width: 20px;
-            height: 20px;
+            width: 16px;
+            height: 16px;
             background: var(--color-primary);
             border-radius: 50%;
             border: 3px solid var(--color-bg-cream);
-            box-shadow: 0 0 0 2px var(--color-primary);
         }
 
-        .timeline-item::after {
-            content: '';
-            position: absolute;
-            right: 9px;
-            top: 20px;
-            width: 2px;
-            height: calc(100% + 2rem);
-            background: var(--color-primary);
-        }
-
-        .timeline-item:last-child::after {
-            display: none;
-        }
-
-        .timeline-year {
+        .timeline-item h4 {
             color: var(--color-primary);
             font-weight: 700;
-            font-size: 1.1rem;
-            margin-bottom: 0.3rem;
-        }
-
-        .timeline-title {
-            color: var(--color-bg-dark);
-            font-weight: 600;
-            font-size: 1.05rem;
             margin-bottom: 0.5rem;
+            font-size: 1.1rem;
         }
 
-        .timeline-description {
+        .timeline-item p {
             color: var(--color-text-primary);
-            font-size: 0.95rem;
-        }
-
-        .highlight-box {
-            background: linear-gradient(135deg, rgba(212, 175, 55, 0.1) 0%, rgba(212, 175, 55, 0.05) 100%);
-            border: 2px solid var(--color-primary);
-            padding: 2rem;
-            border-radius: 12px;
-            margin: 2rem 0;
-        }
-
-        .highlight-box h3 {
-            color: var(--color-primary);
-            margin-top: 0;
+            font-weight: 400;
+            margin: 0;
         }
 
         .values-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
+            gap: 1.5rem;
             margin: 2rem 0;
         }
 
         .value-card {
             background: var(--color-bg-cream);
             border: 2px solid var(--color-border);
-            padding: 2rem;
+            border-radius: 8px;
+            padding: 1.5rem;
             text-align: center;
-            border-radius: 12px;
             transition: all 0.3s ease;
         }
 
         .value-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 10px 30px var(--color-shadow);
+            border-color: var(--color-primary);
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.2);
         }
 
         .value-icon {
-            font-size: 3rem;
+            font-size: 2.5rem;
             margin-bottom: 1rem;
         }
 
         .value-card h4 {
             color: var(--color-primary);
-            margin-bottom: 0.5rem;
-            font-size: 1.2rem;
+            margin-bottom: 0.75rem;
+            font-weight: 700;
+            font-size: 1.1rem;
         }
 
         .value-card p {
-            margin: 0;
+            color: var(--color-text-primary);
             font-size: 0.95rem;
+            font-weight: 400;
+            line-height: 1.6;
+            margin: 0;
         }
 
         .contact-section {
@@ -466,6 +523,8 @@
         .footer-section h4 {
             color: var(--color-primary);
             margin-bottom: 1rem;
+            font-size: 1.1rem;
+            font-weight: 700;
         }
 
         .footer-section a {
@@ -474,10 +533,18 @@
             display: block;
             margin-bottom: 0.5rem;
             transition: color 0.3s ease;
+            font-weight: 400;
+            font-size: 0.95rem;
         }
 
         .footer-section a:hover {
             color: var(--color-primary);
+        }
+
+        .footer-section p {
+            font-weight: 400;
+            font-size: 0.95rem;
+            line-height: 1.6;
         }
 
         .footer-bottom {
@@ -489,15 +556,22 @@
             margin: 0 auto;
         }
 
+        .footer-bottom p {
+            margin: 0.5rem 0;
+            opacity: 0.9;
+            font-weight: 400;
+            font-size: 0.95rem;
+        }
+
         /* RESPONSIVE */
         @media (max-width: 768px) {
             .header-container {
-                flex-direction: column;
+                flex-wrap: wrap;
                 gap: 1rem;
             }
 
             .header-right {
-                flex-direction: column;
+                flex-direction: column-reverse;
                 width: 100%;
                 gap: 1rem;
             }
@@ -509,7 +583,16 @@
             }
 
             nav a {
-                font-size: 0.9rem;
+                font-size: 0.8rem;
+                margin: 0 0.25rem;
+            }
+
+            .page-header h1 {
+                font-size: 2rem;
+            }
+
+            .page-header p {
+                font-size: 1rem;
             }
 
             .profile-section {
@@ -517,18 +600,53 @@
                 gap: 2rem;
             }
 
+            .profile-image {
+                order: 1;
+            }
+
+            .profile-info {
+                order: 2;
+            }
+
             .profile-avatar {
                 width: 200px;
                 height: 200px;
             }
 
+            .section h2 {
+                font-size: 1.75rem;
+            }
+
+            .values-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .content {
+                margin: 2rem auto;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .page-header {
+                padding: 2rem 1rem;
+            }
+
             .page-header h1 {
-                font-size: 2rem;
+                font-size: 1.75rem;
+            }
+
+            .section {
+                margin-bottom: 2rem;
             }
 
             .section h2 {
                 font-size: 1.5rem;
             }
+        }
+
+        @font-face {
+            font-family: 'Cairo';
+            src: url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900') format('woff2');
         }
     </style>
 </head>
@@ -536,33 +654,33 @@
     <!-- HEADER -->
     <header>
         <div class="header-container">
+            <div class="header-right">
+                <div class="lang-switcher">
+                    <button class="active" onclick="switchLanguage('ar')">العربية</button>
+                    <button onclick="switchLanguage('en')">English</button>
+                </div>
+                <nav>
+                    <a href="#contact">التواصل</a>
+                    <a href="https://osama-qonaibe.github.io/roum-token-website/legal-ar.html">القانونية</a>
+                    <a href="https://osama-qonaibe.github.io/roum-token-website/compliance-ar.html">الامتثال</a>
+                    <a href="https://osama-qonaibe.github.io/roum-token-website/about-ar.html" class="active">عننا</a>
+                    <a href="https://osama-qonaibe.github.io/roum-token-website/index-ar.html">الرئيسية</a>
+                </nav>
+            </div>
             <a href="https://osama-qonaibe.github.io/roum-token-website/index-ar.html" class="logo">
                 <div class="logo-image">R</div>
                 <div class="logo-text">
                     <h1>ROUM</h1>
-                    <p>التراث</p>
+                    <p>الموروث</p>
                 </div>
             </a>
-            <div class="header-right">
-                <nav>
-                    <a href="https://osama-qonaibe.github.io/roum-token-website/index-ar.html">الرئيسية</a>
-                    <a href="https://osama-qonaibe.github.io/roum-token-website/about-ar.html" class="active">عن الموقع</a>
-                    <a href="https://osama-qonaibe.github.io/roum-token-website/compliance-ar.html">الامتثال</a>
-                    <a href="https://osama-qonaibe.github.io/roum-token-website/legal-ar.html">الشروط القانونية</a>
-                    <a href="#contact">التواصل</a>
-                </nav>
-                <div class="lang-switcher">
-                    <button onclick="switchLanguage('en')">English</button>
-                    <button class="active" onclick="switchLanguage('ar')">العربية</button>
-                </div>
-            </div>
         </div>
     </header>
 
     <!-- PAGE HEADER -->
     <section class="page-header">
-        <h1>عن الموقع</h1>
-        <p>تعرّف على المطور وصاحب الرؤية وراء رمز ROUM - نبني البنية التحتية المالية للغد</p>
+        <h1>عننا</h1>
+        <p>تعرّف على المطور والرؤية الكامنة وراء بناء البنية التحتية المالية للغد</p>
     </section>
 
     <!-- CONTENT -->
@@ -572,15 +690,15 @@
             <div class="profile-image">
                 <div class="profile-avatar">👨‍💻</div>
                 <div class="profile-name">
-                    <h2>أسامة قنيبة</h2>
-                    <p>مطور سلسلة الكتل متكامل</p>
+                    <h2>أسامة قونيبة</h2>
+                    <p>مطور بلوكتشين متكامل</p>
                 </div>
             </div>
 
             <div class="profile-info">
                 <h3>عني</h3>
-                <p>أنا مطور سلسلة كتل متكامل متحمس، مع خبرة في تطوير العقود الذكية، وبناء أنظمة التمويل اللامركزي (DeFi)، واقتصاديات الرموز الرقمية. مع خلفية في تطوير البرمجيات التقليدية وتقنية سلسلة الكتل المتطورة، أنا ملتزم ببناء بنية تحتية مالية شفافة وآمنة ومتوافقة مع اللوائح للمستقبل.</p>
-                <p>يمثل رمز ROUM رؤيتي لإنشاء منصة عملات رقمية تراثية تجمع بين قوة تقنية سلسلة الكتل والامتثال التنظيمي الاحترافي والتطوير الموجه بالمجتمع.</p>
+                <p>أنا مطور بلوكتشين متحمس متخصص في تطوير العقود الذكية، معمارية التمويل اللامركزي، واقتصاديات التوكنات الرقمية. بفضل خلفيتي في تطوير البرمجيات التقليدية وتقنية البلوكتشين المتقدمة، أنا ملتزم ببناء بنية تحتية مالية شفافة وآمنة وممتثلة للقوانين للمستقبل.</p>
+                <p>يمثل رمز ROUM رؤيتي لإنشاء منصة عملة رقمية موروثة تجمع بين قوة تقنية البلوكتشين والامتثال التنظيمي الاحترافي والتطوير الموجه للمجتمع.</p>
             </div>
         </div>
 
@@ -590,12 +708,12 @@
             
             <div class="highlight-box">
                 <h3>🎯 رؤيتنا</h3>
-                <p>إرساء رمز ROUM كمنصة عملات رقمية رائدة تُدار بشكل احترافي، تربط بين البنية التحتية المالية التقليدية وتقنية سلسلة الكتل المبتكرة، مع الحفاظ على أعلى معايير الشفافية والأمان والامتثال التنظيمي.</p>
+                <p>إرساء رمز ROUM كمنصة عملة رقمية رائدة مُدارة بكفاءة احترافية، تربط البنية التحتية المالية التقليدية بتقنية البلوكتشين المبتكرة، مع الحفاظ على أعلى معايير الشفافية والأمان والامتثال التنظيمي.</p>
             </div>
 
             <div class="highlight-box">
                 <h3>🚀 رسالتنا</h3>
-                <p>تطوير وصيانة نظام بيئي للعملات الرقمية آمن وشفاف ومتوافق مع اللوائح، يُمكّن المستخدمين، ويحترم المتطلبات التنظيمية، ويبني الثقة الدائمة من خلال العمليات الاحترافية والتفاعل مع المجتمع. نحن ملتزمون بتقديم حلول مالية تحترم التراث والابتكار معاً.</p>
+                <p>تطوير وصيانة نظام بيئي آمن وشفاف وممتثل للعملات الرقمية يمكّن المستخدمين ويحترم المتطلبات التنظيمية ويبني الثقة الدائمة من خلال العمليات المهنية والتفاعل المجتمعي. نحن ملتزمون بتقديم حلول مالية تحترم التراث والابتكار معاً.</p>
             </div>
         </div>
 
@@ -607,37 +725,37 @@
                 <div class="value-card">
                     <div class="value-icon">🔒</div>
                     <h4>الأمان أولاً</h4>
-                    <p>كل قرار يعطي الأولوية لأمان المستخدم وحماية الأصول من خلال المعايير الرائدة في الصناعة والمراقبة المستمرة.</p>
+                    <p>كل قرار يعطي الأولوية لأمان المستخدم وحماية الأصول من خلال معايير صناعية رائدة والمراقبة المستمرة.</p>
                 </div>
 
                 <div class="value-card">
                     <div class="value-icon">⚖️</div>
                     <h4>الامتثال</h4>
-                    <p>التزام بنسبة 100% بالمعايير التنظيمية والقوانين الدولية والحوكمة الاحترافية في جميع العمليات.</p>
+                    <p>التزام 100% بمعايير التنظيم والقوانين الدولية والحوكمة المهنية عبر جميع العمليات.</p>
                 </div>
 
                 <div class="value-card">
                     <div class="value-icon">🤝</div>
                     <h4>المجتمع</h4>
-                    <p>البناف مع ومن أجل مجتمعنا من خلال التواصل الشفاف، والمشاركة النشطة، والنجاح المشترك.</p>
+                    <p>البناء مع ومن أجل مجتمعنا من خلال التواصل الشفاف والمشاركة النشطة والنجاح المشترك.</p>
                 </div>
 
                 <div class="value-card">
                     <div class="value-icon">💡</div>
                     <h4>الابتكار</h4>
-                    <p>التطوير المستمر للتكنولوجيا والعمليات مع الحفاظ على الاستقرار والمعايير الاحترافية.</p>
+                    <p>التطوير المستمر للتكنولوجيا والعمليات مع الحفاظ على الاستقرار والمعايير المهنية.</p>
                 </div>
 
                 <div class="value-card">
                     <div class="value-icon">🌍</div>
                     <h4>الشمولية</h4>
-                    <p>جعل تقنية سلسلة الكتل متاحة للجميع مع احترام الثقافات والتقاليد والتراث المتنوعة.</p>
+                    <p>جعل تقنية البلوكتشين متاحة للجميع مع احترام الثقافات والتقاليس والتراثات المتنوعة.</p>
                 </div>
 
                 <div class="value-card">
                     <div class="value-icon">✨</div>
-                    <h4>التميّز</h4>
-                    <p>السعي للتميّز في كل جانب من جوانب منصتنا، من جودة الكود إلى خدمة العملاء إلى التوثيق.</p>
+                    <h4>التميز</h4>
+                    <p>السعي للتميز في كل جانب من جوانب منصتنا، من جودة الكود إلى خدمة العملاء إلى التوثيق الشامل.</p>
                 </div>
             </div>
         </div>
@@ -646,37 +764,37 @@
         <div class="section">
             <h2>الخبرة التقنية</h2>
             
-            <p>أقدم خبرة شاملة عبر نظام سلسلة الكتل والعملات الرقمية:</p>
+            <p>أحمل معي خبرة شاملة عبر النظام البيئي للبلوكتشين والعملات الرقمية:</p>
             
             <div class="skills-grid">
                 <div class="skill-card">
                     <strong>العقود الذكية</strong>
-                    <p>تطوير Solidity، تدقيق العقود، تحسين الأمان، وكفاءة Gas على شبكة Binance Smart Chain والشبكات المتوافقة مع EVM.</p>
+                    <p>تطوير Solidity وتدقيق العقود وتحسين الأمان وكفاءة استهلاك الغاز على شبكة Binance Smart Chain والشبكات المتوافقة مع EVM.</p>
                 </div>
 
                 <div class="skill-card">
-                    <strong>بنية DeFi</strong>
-                    <p>تصميم اقتصاديات الرموز، بروتوكولات السيولة، آليات الزراعة بالعائد، وتطوير النظام البيئي المستدام.</p>
+                    <strong>معمارية DeFi</strong>
+                    <p>تصميم اقتصاديات التوكنات وبروتوكولات السيولة وآليات توليد العوائد وتطوير النظام البيئي المستدام.</p>
                 </div>
 
                 <div class="skill-card">
                     <strong>تطوير الواجهة الأمامية</strong>
-                    <p>React، Vue.js، تكامل Web3.js، ربط المحافظ، وتصميم UI/UX احترافي لتطبيقات سلسلة الكتل.</p>
+                    <p>React وVue.js وتكامل Web3.js وربط المحافظ وتصميم واجهة المستخدم الاحترافي لتطبيقات البلوكتشين.</p>
                 </div>
 
                 <div class="skill-card">
                     <strong>أنظمة الخادم</strong>
-                    <p>Node.js، Python، تصميم قواعد البيانات، تطوير API، وبنية تحتية قابلة للتوسع لمنصات سلسلة الكتل.</p>
+                    <p>Node.js وPython وتصميم قواعد البيانات وتطوير API والبنية التحتية القابلة للتوسع لمنصات البلوكتشين.</p>
                 </div>
 
                 <div class="skill-card">
                     <strong>الأمان والتدقيق</strong>
-                    <p>تحليل أمان العقود الذكية، تقييم الثغرات، تنفيذ أفضل الممارسات، والتحقق من الامتثال.</p>
+                    <p>تحليل أمان العقود الذكية وتقييم الثغرات وتطبيق أفضل الممارسات والتحقق من الامتثال.</p>
                 </div>
 
                 <div class="skill-card">
                     <strong>الامتثال التنظيمي</strong>
-                    <p>تنفيذ GDPR، AML/KYC، الامتثال لـ OFAC، وتكامل الإطار التنظيمي الدولي.</p>
+                    <p>تنفيذ GDPR وAML/KYC والامتثال لـ OFAC وتكامل الإطار التنظيمي الدولي.</p>
                 </div>
             </div>
         </div>
@@ -687,27 +805,23 @@
             
             <div class="timeline">
                 <div class="timeline-item">
-                    <div class="timeline-year">2025 - الربع الأول</div>
-                    <div class="timeline-title">مرحلة المفهوم والتصميم</div>
-                    <div class="timeline-description">التخطيط الشامل، تصميم اقتصاديات الرموز، تطوير الورقة البيضاء، وإرساء الإطار التنظيمي لرمز ROUM.</div>
+                    <h4>2025 - الربع الأول</h4>
+                    <p>مرحلة المفهوم والتصميم - التخطيط الشامل وتصميم اقتصاديات التوكنات وتطوير الورقة البيضاء وإرساء الإطار التنظيمي لرمز ROUM.</p>
                 </div>
 
                 <div class="timeline-item">
-                    <div class="timeline-year">2025 - الربع الثاني</div>
-                    <div class="timeline-title">التطوير والاختبار</div>
-                    <div class="timeline-description">تطوير العقد الذكي، الاختبار الموسع، التدقيق الأمني، وتطوير البنية التحتية للمنصة.</div>
+                    <h4>2025 - الربع الثاني</h4>
+                    <p>التطوير والاختبار - تطوير العقود الذكية والاختبار الموسع والتدقيق الأمني وتطوير البنية التحتية للمنصة.</p>
                 </div>
 
                 <div class="timeline-item">
-                    <div class="timeline-year">2025 - الربع الثالث</div>
-                    <div class="timeline-title">الإطلاق والنمو</div>
-                    <div class="timeline-description">الإطلاق الرسمي للرمز على شبكة Binance Smart Chain، التوزيع الأولي، بناء المجتمع، وإرساء السوق.</div>
+                    <h4>2025 - الربع الثالث</h4>
+                    <p>الإطلاق والنمو - الإطلاق الرسمي للتوكن على شبكة Binance Smart Chain والتوزيع الأولي وبناء المجتمع والتواجد في السوق.</p>
                 </div>
 
                 <div class="timeline-item">
-                    <div class="timeline-year">2025 - الربع الرابع</div>
-                    <div class="timeline-title">التوسع والشراكات</div>
-                    <div class="timeline-description">الشراكات الاستراتيجية، إدراج في البورصات، توسيع النظام البيئي، ومبادرات التفاعل مع المجتمع.</div>
+                    <h4>2025 - الربع الرابع</h4>
+                    <p>التوسع والشراكات - الشراكات الاستراتيجية والإدراج في البورصات وتوسيع النظام البيئي ومبادرات التفاعل المجتمعي.</p>
                 </div>
             </div>
         </div>
@@ -719,12 +833,12 @@
             <div class="skills-grid">
                 <div class="skill-card">
                     <strong>التدقيق الاحترافي</strong>
-                    <p>عدة تدقيقات أمنية مكتملة مع شركات أمن العملات الرقمية الاحترافية لضمان سلامة العقد.</p>
+                    <p>عدة عمليات تدقيق أمني مكتملة مع شركات أمان العملات الرقمية المتخصصة لضمان سلامة العقود.</p>
                 </div>
 
                 <div class="skill-card">
                     <strong>إطار الامتثال</strong>
-                    <p>توثيق شامل للامتثال يغطي GDPR، AML/KYC، OFAC، والمعايير التنظيمية الدولية.</p>
+                    <p>توثيق شامل للامتثال يغطي GDPR وAML/KYC وOFAC والمعايير التنظيمية الدولية.</p>
                 </div>
 
                 <div class="skill-card">
@@ -734,17 +848,17 @@
 
                 <div class="skill-card">
                     <strong>موقع احترافي</strong>
-                    <p>موقع جاهز للإنتاج بتصميم متجاوب، وتوثيق كامل، وعلامة تجارية احترافية شاملة.</p>
+                    <p>موقع ويب جاهز للإنتاج بتصميم متجاوب وتوثيق شامل وعلامة تجارية احترافية.</p>
                 </div>
 
                 <div class="skill-card">
                     <strong>بناء المجتمع</strong>
-                    <p>مشاركة نشطة في مجتمعات سلسلة الكتل وتعزيز التواصل الشفاف مع جميع أصحاب المصلحة.</p>
+                    <p>مشاركة نشطة في مجتمعات البلوكتشين وتعزيز التواصل الشفاف مع جميع أصحاب المصلحة.</p>
                 </div>
 
                 <div class="skill-card">
-                    <strong>التزام مفتوح المصدر</strong>
-                    <p>مستودع GitHub بكود نظيف، وتوثيق شامل، وعمليات تطوير شفافة.</p>
+                    <strong>الالتزام بمفتوح المصدر</strong>
+                    <p>مستودع GitHub بكود نظيف وتوثيق شامل وعمليات تطوير شفافة.</p>
                 </div>
             </div>
         </div>
@@ -755,25 +869,25 @@
             
             <h3>الأهداف قصيرة المدى (6-12 شهراً)</h3>
             <ul style="list-style-position: inside; color: var(--color-text-primary); line-height: 2;">
-                <li>✅ إرساء مجتمع من المستخدمين والمطورين النشطين</li>
-                <li>✅ تأمين الإدراج في البورصات على منصات العملات الرقمية الرئيسية</li>
-                <li>✅ إطلاق ميزات DeFi وحوض السيولة</li>
-                <li>✅ التوسع إلى شبكات سلسلة كتل متعددة</li>
+                <li>✅ إرساء مجتمع من المستخدمين والمطورين المنخرطين</li>
+                <li>✅ تأمين الإدراج على منصات تبادل العملات الرقمية الرئيسية</li>
+                <li>✅ إطلاق ميزات DeFi وحمامات السيولة</li>
+                <li>✅ التوسع إلى شبكات بلوكتشين متعددة</li>
             </ul>
 
             <h3>الرؤية طويلة المدى (1-3 سنوات)</h3>
             <ul style="list-style-position: inside; color: var(--color-text-primary); line-height: 2;">
-                <li>✅ إرساء ROUM كعملة رقمية رائدة تركز على التراث</li>
+                <li>✅ إرساء ROUM كعملة رقمية رائدة تركز على الموروث</li>
                 <li>✅ بناء نظام بيئي شامل للخدمات المالية</li>
-                <li>✅ تحقيق الاعتراف التنظيمي في ولايات قضائية متعددة</li>
+                <li>✅ تحقيق الاعتراف التنظيمي في اختصاصات قضائية متعددة</li>
                 <li>✅ إنشاء شراكات ذات مغزى مع التمويل التقليدي</li>
             </ul>
         </div>
 
         <!-- CONTACT SECTION -->
-        <div class="contact-section">
+        <div class="contact-section" id="contact">
             <h3>تواصل معنا</h3>
-            <p>هل لديك أسئلة، فرص، أو تريد فقط التواصل؟ دعنا نتحدث عن مستقبل رمز ROUM وابتكار سلسلة الكتل.</p>
+            <p>هل لديك أسئلة أو فرص أو تريد فقط التحدث عن مستقبل رمز ROUM وابتكار البلوكتشين؟</p>
             
             <div class="contact-links">
                 <a href="mailto:osama@roumtoken.com" class="contact-link">📧 البريد الإلكتروني</a>
@@ -789,20 +903,20 @@
         <div class="footer-container">
             <div class="footer-section">
                 <h4>رمز ROUM</h4>
-                <p>نبني البنية التحتية المالية للغد مع الشفافية والامتثال.</p>
+                <p>بناء البنية التحتية المالية للغد مع الشفافية والامتثال الكامل.</p>
             </div>
 
             <div class="footer-section">
                 <h4>التنقل</h4>
                 <a href="https://osama-qonaibe.github.io/roum-token-website/index-ar.html">الرئيسية</a>
-                <a href="https://osama-qonaibe.github.io/roum-token-website/about-ar.html">عن الموقع</a>
+                <a href="https://osama-qonaibe.github.io/roum-token-website/about-ar.html">عننا</a>
                 <a href="https://osama-qonaibe.github.io/roum-token-website/compliance-ar.html">الامتثال</a>
-                <a href="https://osama-qonaibe.github.io/roum-token-website/legal-ar.html">الشروط القانونية</a>
+                <a href="https://osama-qonaibe.github.io/roum-token-website/legal-ar.html">القانونية</a>
                 <a href="#contact">التواصل</a>
             </div>
 
             <div class="footer-section">
-                <h4>الشروط القانونية</h4>
+                <h4>القانونية</h4>
                 <a href="https://osama-qonaibe.github.io/roum-token-website/legal-ar.html#terms-of-service">شروط الخدمة</a>
                 <a href="https://osama-qonaibe.github.io/roum-token-website/legal-ar.html#privacy-policy">سياسة الخصوصية</a>
                 <a href="https://osama-qonaibe.github.io/roum-token-website/legal-ar.html#disclaimer">إخلاء المسؤولية</a>
@@ -820,16 +934,16 @@
 
         <div class="footer-bottom">
             <p>&copy; 2025 رمز ROUM. جميع الحقوق محفوظة.</p>
-            <p>تطوير أسامة قنيبة | مطور سلسلة كتل متكامل</p>
+            <p>طورها أسامة قونيبة | مطور بلوكتشين متكامل</p>
         </div>
     </footer>
 
     <script>
         function switchLanguage(lang) {
-            if (lang === 'en') {
-                window.location.href = 'https://osama-qonaibe.github.io/roum-token-website/about.html';
-            } else if (lang === 'ar') {
+            if (lang === 'ar') {
                 window.location.href = 'https://osama-qonaibe.github.io/roum-token-website/about-ar.html';
+            } else if (lang === 'en') {
+                window.location.href = 'https://osama-qonaibe.github.io/roum-token-website/about.html';
             }
         }
     </script>
