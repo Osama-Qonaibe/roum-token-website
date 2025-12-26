@@ -1,0 +1,23 @@
+# ROUM Token Website - robots.txt
+# Allow search engines to index all pages
+
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+Disallow: /api/
+
+# Sitemap
+Sitemap: https://roumtoken.com/sitemap.xml
+
+# Specific crawl delays
+Crawl-delay: 1
+
+# Allow major search engines
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
