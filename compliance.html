@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ROUM Token Compliance Standards - 100% Binance Smart Chain compliant with GDPR, AML/KYC, OFAC standards">
+    <meta name="keywords" content="Compliance, GDPR, AML/KYC, OFAC, FinCEN, Binance Smart Chain">
+    <title>Compliance Standards | ROUM Token</title>
+    
+    <style>
+        :root {
+            --color-primary: #D4AF37;
+            --color-primary-light: #E6C060;
+            --color-primary-dark: #B8860B;
+            --color-bg-dark: #5E5240;
+            --color-bg-light: #C9A961;
+            --color-bg-cream: #FFF8F0;
+            --color-bg-chocolate: #6B5A4A;
+            --color-text-primary: #5E5240;
+            --color-text-light: #FFF8F0;
+            --color-text-white: #FFFFFF;
+            --color-border: #D4AF37;
+            --color-shadow: rgba(94, 82, 64, 0.15);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--color-text-primary);
+            background-color: var(--color-bg-cream);
+        }
+
+        /* HEADER */
+        header {
+            background: linear-gradient(135deg, var(--color-bg-dark) 0%, var(--color-bg-chocolate) 100%);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px var(--color-shadow);
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            text-decoration: none;
+            color: var(--color-text-light);
+        }
+
+        .logo-image {
+            width: 50px;
+            height: 50px;
+            background: var(--color-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.5rem;
+            color: var(--color-bg-dark);
+        }
+
+        .logo-text h1 {
+            font-size: 1.5rem;
+            margin: 0;
+            color: var(--color-primary);
+            letter-spacing: 2px;
+        }
+
+        nav a {
+            color: var(--color-text-light);
+            text-decoration: none;
+            margin: 0 1.5rem;
+            padding: 0.5rem 0;
+            border-bottom: 2px solid transparent;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        nav a:hover,
+        nav a.active {
+            color: var(--color-primary);
+            border-bottom-color: var(--color-primary);
+        }
+
+        /* PAGE HEADER */
+        .page-header {
+            background: linear-gradient(135deg, var(--color-bg-light) 0%, #8B7355 50%, var(--color-bg-dark) 100%);
+            color: var(--color-text-light);
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .page-header h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .page-header p {
+            font-size: 1.1rem;
+            opacity: 0.95;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* CONTENT */
+        .content {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .compliance-notice {
+            background: linear-gradient(135deg, var(--color-bg-dark) 0%, var(--color-bg-chocolate) 100%);
+            color: var(--color-text-light);
+            padding: 2.5rem;
+            border-radius: 12px;
+            margin-bottom: 3rem;
+            border-left: 5px solid var(--color-primary);
+            box-shadow: 0 10px 30px var(--color-shadow);
+        }
+
+        .compliance-notice h2 {
+            color: var(--color-primary);
+            font-size: 1.75rem;
+            margin-bottom: 1rem;
+        }
+
+        .compliance-notice p {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .section {
+            margin-bottom: 4rem;
+        }
+
+        .section h2 {
+            color: var(--color-primary);
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid var(--color-border);
+        }
+
+        .section h3 {
+            color: var(--color-bg-dark);
+            font-size: 1.3rem;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .section p {
+            color: var(--color-text-primary);
+            font-size: 1rem;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .compliance-list {
+            list-style: none;
+            margin: 1.5rem 0;
+        }
+
+        .compliance-list li {
+            padding: 1rem 0 1rem 2rem;
+            position: relative;
+            color: var(--color-text-primary);
+        }
+
+        .compliance-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--color-primary);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .framework-card {
+            background: var(--color-bg-cream);
+            border-left: 4px solid var(--color-primary);
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+        }
+
+        .framework-card:hover {
+            transform: translateX(5px);
+            box-shadow: 0 6px 20px var(--color-shadow);
+        }
+
+        .framework-card strong {
+            color: var(--color-primary);
+            font-size: 1.1rem;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .framework-card p {
+            margin: 0;
+            font-size: 0.95rem;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.1) 0%, rgba(212, 175, 55, 0.05) 100%);
+            border: 2px solid var(--color-primary);
+            padding: 2rem;
+            border-radius: 12px;
+            margin: 2rem 0;
+        }
+
+        .highlight-box h3 {
+            color: var(--color-primary);
+            margin-top: 0;
+        }
+
+        .stats-flex {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .stat-item {
+            background: var(--color-bg-cream);
+            padding: 2rem;
+            text-align: center;
+            border-radius: 12px;
+            border: 2px solid var(--color-border);
+            transition: all 0.3s ease;
+        }
+
+        .stat-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px var(--color-shadow);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            color: var(--color-primary);
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-text {
+            color: var(--color-text-primary);
+            font-weight: 600;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2rem 0;
+            background: var(--color-bg-cream);
+            box-shadow: 0 4px 15px var(--color-shadow);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        thead {
+            background: linear-gradient(135deg, var(--color-bg-dark) 0%, var(--color-bg-chocolate) 100%);
+            color: var(--color-text-light);
+        }
+
+        th, td {
+            padding: 1.2rem;
+            text-align: left;
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        th {
+            font-weight: 600;
+            color: var(--color-primary);
+            border-bottom: 2px solid var(--color-primary);
+        }
+
+        tbody tr:hover {
+            background: rgba(212, 175, 55, 0.05);
+        }
+
+        /* FOOTER */
+        footer {
+            background: linear-gradient(180deg, var(--color-bg-dark) 0%, #3a3230 100%);
+            color: var(--color-text-light);
+            padding: 3rem 2rem;
+            margin-top: 4rem;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h4 {
+            color: var(--color-primary);
+            margin-bottom: 1rem;
+        }
+
+        .footer-section a {
+            color: var(--color-text-light);
+            text-decoration: none;
+            display: block;
+            margin-bottom: 0.5rem;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            color: var(--color-primary);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(212, 175, 55, 0.2);
+            padding-top: 2rem;
+            text-align: center;
+            color: var(--color-text-light);
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            nav {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 0.5rem;
+            }
+
+            nav a {
+                margin: 0 0.5rem;
+                font-size: 0.9rem;
+            }
+
+            .page-header h1 {
+                font-size: 2rem;
+            }
+
+            .section h2 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <div class="header-container">
+            <a href="/" class="logo">
+                <div class="logo-image">R</div>
+                <div class="logo-text">
+                    <h1>ROUM</h1>
+                    <p>HERITAGE</p>
+                </div>
+            </a>
+            <nav>
+                <a href="/">Home</a>
+                <a href="/about.html">About</a>
+                <a href="/compliance.html" class="active">Compliance</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- PAGE HEADER -->
+    <section class="page-header">
+        <h1>Compliance Standards</h1>
+        <p>Professional regulatory framework with 100% Binance Smart Chain compliance and zero exceptions</p>
+    </section>
+
+    <!-- CONTENT -->
+    <div class="content">
+        <!-- BINANCE COMMITMENT -->
+        <div class="compliance-notice">
+            <h2>🔐 BINANCE SMART CHAIN COMMITMENT</h2>
+            <p><strong>100% COMPLIANCE WITH ZERO EXCEPTIONS</strong></p>
+            <p>ROUM Token is committed to maintaining complete compliance with all Binance Smart Chain standards, security requirements, and regulatory frameworks. This commitment is non-negotiable and applies across all jurisdictions and operational domains.</p>
+        </div>
+
+        <!-- EXECUTIVE SUMMARY -->
+        <div class="section">
+            <h2>Executive Summary</h2>
+            <p>ROUM Token operates under a comprehensive compliance framework designed to ensure maximum transparency, security, and regulatory adherence. Our multi-layered approach combines industry best practices with proactive regulatory engagement.</p>
+            
+            <div class="stats-flex">
+                <div class="stat-item">
+                    <div class="stat-number">7</div>
+                    <div class="stat-text">Compliance Frameworks</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-text">Binance Compliant</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">✅</div>
+                    <div class="stat-text">Professionally Audited</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">24/7</div>
+                    <div class="stat-text">Monitoring</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- REGULATORY FRAMEWORKS -->
+        <div class="section">
+            <h2>Regulatory Frameworks</h2>
+
+            <div class="framework-card">
+                <strong>1. GDPR (General Data Protection Regulation) - EU</strong>
+                <p>Complete data protection compliance with full user rights including access, modification, and deletion. User consent management, data retention policies, and privacy-by-design principles implemented throughout the platform.</p>
+            </div>
+
+            <div class="framework-card">
+                <strong>2. AML/KYC (Anti-Money Laundering / Know Your Customer)</strong>
+                <p>Comprehensive customer verification, transaction monitoring, and suspicious activity reporting. Multi-level KYC verification with enhanced due diligence for high-risk users and entities.</p>
+            </div>
+
+            <div class="framework-card">
+                <strong>3. OFAC (Office of Foreign Assets Control) - US</strong>
+                <p>Sanctions screening against OFAC SDN list, consolidated non-SDN list, and other restricted party lists. Real-time monitoring of transactions and automatic blocking of restricted jurisdictions and entities.</p>
+            </div>
+
+            <div class="framework-card">
+                <strong>4. FinCEN (Financial Crimes Enforcement Network)</strong>
+                <p>Compliance with US Treasury regulations, Currency Transaction Reports (CTR), and Suspicious Activity Reports (SAR). Regular filing and monitoring protocols for financial crime prevention.</p>
+            </div>
+
+            <div class="framework-card">
+                <strong>5. SOX (Sarbanes-Oxley) - Corporate Governance</strong>
+                <p>Financial reporting accuracy, internal controls assessment, and management accountability. Independent audits and transparent financial disclosure requirements.</p>
+            </div>
+
+            <div class="framework-card">
+                <strong>6. Local & Regional Regulations</strong>
+                <p>Jurisdiction-specific compliance in all operating markets. Regular monitoring of regulatory changes and proactive implementation of new requirements.</p>
+            </div>
+
+            <div class="framework-card">
+                <strong>7. International Standards & Best Practices</strong>
+                <p>FATF recommendations, Basel III compliance, and emerging blockchain regulatory standards. Industry-leading security protocols and transparency measures.</p>
+            </div>
+        </div>
+
+        <!-- DATA PROTECTION -->
+        <div class="section">
+            <h2>Data Protection & User Privacy</h2>
+            
+            <h3>User Rights</h3>
+            <ul class="compliance-list">
+                <li>Right to access personal data</li>
+                <li>Right to data portability</li>
+                <li>Right to deletion (Right to be Forgotten)</li>
+                <li>Right to rectification of inaccurate data</li>
+                <li>Right to restrict processing</li>
+                <li>Right to object to processing</li>
+                <li>Right to lodge complaints with authorities</li>
+            </ul>
+
+            <h3>Data Security Measures</h3>
+            <ul class="compliance-list">
+                <li>End-to-end encryption for all sensitive data</li>
+                <li>Multi-factor authentication (MFA) enforcement</li>
+                <li>Regular security audits and penetration testing</li>
+                <li>Secure data backup and disaster recovery</li>
+                <li>Access control and role-based permissions</li>
+                <li>Regular employee security training</li>
+                <li>Data retention policies with automatic deletion</li>
+            </ul>
+        </div>
+
+        <!-- TRANSACTION MONITORING -->
+        <div class="section">
+            <h2>Transaction Monitoring & Enforcement</h2>
+            
+            <div class="highlight-box">
+                <h3>Real-Time Monitoring System</h3>
+                <p>24/7 automated transaction monitoring with AI-powered anomaly detection. Suspicious patterns trigger immediate investigation and appropriate escalation.</p>
+            </div>
+
+            <h3>Violation Procedures</h3>
+            <ul class="compliance-list">
+                <li>Automatic flagging of suspicious transactions</li>
+                <li>Immediate notification to compliance team</li>
+                <li>Investigation within 24-48 hours</li>
+                <li>Regulatory reporting where required</li>
+                <li>Account restrictions or closure if necessary</li>
+                <li>Full documentation and audit trail</li>
+                <li>User notification within legal timeframes</li>
+            </ul>
+
+            <h3>Enforcement Actions</h3>
+            <ul class="compliance-list">
+                <li>Transaction reversal for violations</li>
+                <li>Account suspension or permanent closure</li>
+                <li>Asset seizure in compliance with regulations</li>
+                <li>Regulatory reporting and cooperation</li>
+                <li>Legal action when appropriate</li>
+                <li>Zero-tolerance policy for repeated violations</li>
+            </ul>
+        </div>
+
+        <!-- LEGAL COMMITMENTS -->
+        <div class="section">
+            <h2>Legal Binding Commitments</h2>
+            
+            <div class="highlight-box">
+                <h3>📜 Binding Agreement</h3>
+                <p>ROUM Token legally commits to maintaining compliance with all standards outlined in this document. Violation of these commitments constitutes a material breach of our operational framework and may result in operational suspension or termination.</p>
+                <p><strong>This document is legally binding and enforceable.</strong></p>
+            </div>
+        </div>
+
+        <!-- REPORTING & TRANSPARENCY -->
+        <div class="section">
+            <h2>Reporting & Transparency</h2>
+            
+            <h3>Regular Reporting</h3>
+            <ul class="compliance-list">
+                <li>Quarterly compliance reports to stakeholders</li>
+                <li>Annual independent audits</li>
+                <li>Monthly risk assessment updates</li>
+                <li>Real-time incident reporting</li>
+                <li>Public compliance dashboard</li>
+            </ul>
+
+            <h3>Transparency Measures</h3>
+            <ul class="compliance-list">
+                <li>Open documentation of all policies</li>
+                <li>Public access to audit reports</li>
+                <li>Community feedback mechanisms</li>
+                <li>Regular compliance briefings</li>
+                <li>Third-party verification available</li>
+            </ul>
+        </div>
+
+        <!-- CONTACT & SUPPORT -->
+        <div class="section">
+            <h2>Compliance Support & Inquiries</h2>
+            
+            <p>For compliance-related questions, concerns, or to report suspected violations:</p>
+            
+            <div class="framework-card">
+                <strong>📯 Compliance Contact</strong>
+                <p>Email: compliance@roumtoken.com</p>
+                <p>Response Time: Within 24 business hours</p>
+            </div>
+
+            <div class="framework-card">
+                <strong>🔏 Report Violations</strong>
+                <p>Email: security@roumtoken.com</p>
+                <p>24/7 hotline available for urgent reports</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>ROUM Token</h4>
+                <p>Building tomorrow's financial infrastructure with transparency and compliance.</p>
+            </div>
+
+            <div class="footer-section">
+                <h4>Navigation</h4>
+                <a href="/">Home</a>
+                <a href="/about.html">About Us</a>
+                <a href="/compliance.html">Compliance</a>
+                <a href="#contact">Contact</a>
+            </div>
+
+            <div class="footer-section">
+                <h4>Legal</h4>
+                <a href="#">Terms of Service</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Disclaimer</a>
+                <a href="#">Cookie Policy</a>
+            </div>
+
+            <div class="footer-section">
+                <h4>Resources</h4>
+                <a href="#">Documentation</a>
+                <a href="#">API Reference</a>
+                <a href="#">FAQ</a>
+                <a href="#">Support</a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 ROUM Token. All rights reserved.</p>
+            <p>Compliance Standards | Last Updated: December 26, 2025</p>
+        </div>
+    </footer>
+</body>
+</html>
